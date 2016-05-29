@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                     @foreach($latest_news as $news)
-                        <div class="module col-sm-6 col-lg-6 img-op">
+                        <div class="module col-sm-6 col-lg-6">
                             <div class="responsive-image hidden-xs">
                                 <img src="{{$news->page_image}}" alt="{{$news->title}}" class="img-responsive">
                             </div>
