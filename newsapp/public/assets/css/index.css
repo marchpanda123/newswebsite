@@ -6026,77 +6026,11 @@ button.close {
   float: right;
   border: none;
 }
-.main span{height:40px; width:40px; display:block; position:relative;} 
-
-.demoSpan1{width:40px; height:40px;}
-
-.demoSpan1:before{
-  content:''; 
-  height:3px; 
-  width:40px; 
-  background:#FFF; 
-  border-radius:4px;
-  -webkit-border-radius:4px;
-  -moz-border-radius:4px; 
-  display:block; 
-  position:absolute; 
-  top:5px; left:0; 
-  box-shadow:0 12px #FFF, 0 24px #FFF;
-  -webkit-box-shadow:0 12px #FFF, 0 24px #FFF;
-  -moz-box-shadow:0 12px #FFF, 0 24px #FFF;
-}
-
+.main span{height:35px; width:35px; display:block; position:relative;} 
 
 .siderbar-text{
     font-family: Microsoft YaHei;
   }
-
-
-.main span{height:40px; width:40px; display:block; position:relative;} 
-
-.demoSpan3{width:40px; height:40px; display:block;}
-
-.demoSpan3:before{
-  content:''; 
-  height:20px; 
-  width:24px; 
-  display:block; 
-  border:3px #FFF solid; 
-  border-top:0; 
-  position:absolute; 
-  top:15px; left:5px;
-}
-
-.demoSpan4:before{
-  content:'+'; 
-  height:9px; 
-  width:9px; 
-  display:block; 
-  position:absolute; 
-  top:19px; left:14px; 
-  font-size:19px; 
-  font-family:serif; 
-  color:#FFF; 
-  line-height:11px; 
-  text-indent:-1px; 
-  border:1px #FFF solid;
-}
-
-.demoSpan4:after{
-  content:''; 
-  height:24px; 
-  width:23px; 
-  border-top:5px #FFF solid; 
-  border-right:5px #FFF solid; 
-  position:absolute; top:4px; 
-  left:6px; 
-  transform:scale(1,0.8) rotate(-45deg);
-  -webkit-transform:scale(1,0.8) rotate(-45deg);
-  -moz-transform:scale(1,0.8) rotate(-45deg);
-  -o-transform:scale(1,0.8) rotate(-45deg);
-  -ms-transform:scale(1,0.8) rotate(-45deg);
-}
-
 
 /*tele*/
 .module-tele{

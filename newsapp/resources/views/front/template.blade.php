@@ -93,8 +93,8 @@
 {{--Siderbar--}}
                 <div class="main clearfix">
                     <div id="st-trigger-effects" class="column siderbarnav visible-xs"> 
-                        <button data-effect="st-effect-111" class="sb-btn2"><span><img src="/assets/image/house.png" class="img-responsive"></span></button>
-                        <button data-effect="st-effect-1" class="sb-btn1"><span><img src="/assets/image/notepad.png" class="img-responsive"></span></button>
+                        <button data-effect="st-effect-111" class="sb-btn2"><span><img src="/assets/image/link8.png" class="img-responsive"></span></button>
+                        <button data-effect="st-effect-1" class="sb-btn1"><span><img src="/assets/image/menu4.png" class="img-responsive"></span></button>
                     </div>  
                 </div><!-- /main -->
         
