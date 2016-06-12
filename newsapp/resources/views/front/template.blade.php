@@ -161,14 +161,14 @@
             <div class="module-footer-inner">
                 <div class="module-footer-content">
                     <p class="module-footer-text">
-                        <a>关于海外网</a>|
-                        <a>广告服务</a>|
-                        <a>联系我们</a>|
-                        <a>网站地图</a>|
-                        <a>法律顾问：</a>
-                    </p>
+                        <a href="http://corp.xineurope.com/company/" target="_black">关于我们</a>|
+                        <a href="http://corp.xineurope.com/about/service.php" target="_black">服务条款</a>|
+                        <a href="http://corp.xineurope.com/company/contact.php" target="_black">联系我们</a>|
+                        <a href="http://corp.xineurope.com/advertise/" target="_black">广告服务</a>|
+                        <a href="http://corp.xineurope.com/company/copyme.php" target="_black">复制新欧洲</a>
+                    </p>  
                     <p class="module-footer-right">海外网版权所有，未经书面授权禁止使用</p>
-                    <p class="module-footer-copyright">Copyright 2011-2014 by www. .cn all rights reserved</p>
+                    <p class="module-footer-copyright">Copyright © 2015 by news.xineurope.com all rights reserved</p>
                 </div>
             </div>
         </div>
