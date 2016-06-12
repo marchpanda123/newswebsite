@@ -77,7 +77,7 @@
 {{-- logo Bar --}}
             <div>
                 <div class="top-blank"></div>
-                <div class="top-text">
+                <div class="top-text hidden-xs">
                     <p class="top-text-content"></p>
                     <span class="top-line"></span>
                     <a class="top-text-xcode">关注旅法华人战报</a>
@@ -157,6 +157,28 @@
         </header>
 
 @yield('content')
+
+        <div class="linkme">
+            <dl>
+                <dt>巴黎(广告):</dt>
+                <dd>0033 (0)1 46 78 00 16</dd>
+                <dd>pub@xineurope.com</dd>
+            </dl>
+            <dl>
+                <dt>上海(广告):</dt>
+                <dd>tousu@xineurope.com</dd>
+                <dd>0033(0)146780016</dd>
+            </dl>
+            <dl>
+                <dt>投诉/客服</dt>
+                <dd><strong>投诉: </strong>0033 (0)1 46 78 00 16</dd>
+                <dd><strong>客服: </strong>pub@xineurope.com</dd>
+            </dl>
+            <dl class="visible-xs">
+                <img src="/assets/image/qrcode.jpg" class="img-responsive img-code-mobile">
+            </dl>
+        </div>
+
         <div class="module-footer">
             <div class="module-footer-inner">
                 <div class="module-footer-content">

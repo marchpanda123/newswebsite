@@ -6065,7 +6065,7 @@ button.close {
 }
 .module-footer-content{
   font-family: Microsoft Yahei;
-  padding-top: 30px;
+  padding-top: 25px;
   margin:0 auto;
 }
 
@@ -6089,41 +6089,149 @@ button.close {
   width: 100%;
   height: 20px;
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 373px) and (max-width: 736px){
+.module-footer-text{
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  color: #666;
+  cursor: pointer;
+}  
+.module-footer-text a{
+  font-size: 10px;
+  padding: 3px 1px;
+}
 .module-footer-right{
-  padding: 10px;
+  font-size: 8px;
+  padding: 5px;
   text-align: center;
   width: 100%;
   height: 20px;
 }
 .module-footer-copyright{
-  padding: 10px;
+  font-size: 15px;
+  padding: 5px;
   text-align: center;
   width: 100%;
   height: 20px;
 }
+}
 
-
-/*tele*/
-.module-tele{
-  padding-top: 50px;
+@media screen and (max-width: 374px) {
+.module-footer-text{
+  text-align: center;
   width: 100%;
-  height: 200px;
+  height:20px;
+  color: #666;
+  cursor: pointer;
+  font-size:1px;
+}  
+.module-footer-text a{
+  padding: 3px 0px;
 }
-.module-tele-container{
-  width: 80%;
-  height: 120px; 
-  margin:0 auto;
-  border: 1px solid #B2B0B0;
-  font-family: Microsoft Yahei;
+.module-footer-right{
+  font-size: 4px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  height: 20px;
 }
-.module-tele-1,.module-tele-2,.module-tele-3,.module-tele-4{
-  width: 25%;
-  color: #A79F9F;
-  line-height: 10px;
-  padding: 30px 20px;
-  margin: 0 auto;
-  display: inline-block;
+.module-footer-copyright{
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  height: 20px;
+}
 }
 
-/*tagcolor*/
+
+
+/*linkme*/
+.linkme{
+    overflow: hidden;
+    width: 960px;
+    background: #ffffff;
+    margin: 0 auto 12px;
+    border: 1px solid #B2B0B0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.linkme dl {
+    display: inline-block;
+    padding: 30px 10px 20px 10px;
+    margin: 0 40px;
+    color: #666666;
+    font-size: 14px;
+}
+.linkme dt {
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    padding-left: 3px;
+}
+.linkme dd {
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    }
+@media screen and (min-width: 600px) and (max-width: 960px) {
+.linkme{
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto 12px;
+    border: none;
+    margin-bottom: 10px;
+}
+.linkme dl {
+    display: inline-block;
+    padding: 5px 10px 5px 20px;
+    margin:0 auto;
+    color: #666666;
+    font-size: 14px;
+}
+.linkme dt {
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    padding-left: 3px;
+}
+.linkme dd {
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    }
+}
+@media screen and (max-width: 600px) {
+.linkme{
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto 12px;
+    border: none;
+    margin-bottom: 10px;
+}
+.linkme dl {
+    display: block;
+    padding: 5px 10px 5px 20px;
+    margin:0 auto;
+    color: #666666;
+    font-size: 14px;
+}
+.linkme dt {
+    height: 35px;
+    line-height: 35px;
+    font-weight: bold;
+    padding-left: 3px;
+}
+.linkme dd {
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    }
+}
+.img-code-mobile{
+  width: 80px;
+  height: 80px;
+}
+
+

@@ -340,31 +340,6 @@
 
         </div>
 
-        <!-- tele section -->
-    <section class="module-tele visible-lg">
-    <div class="module-tele-container">
-        <div class="module-tele-1">
-            <p>巴黎（广告）：</p>
-            <p>0033 (0)1 46 78 00 16</p>
-            <p>pub@xineurope.com</p>
-        </div>
-        <div class="module-tele-2">
-            <p>上海（广告）：</p>
-            <p>0086 (0)21 60 43 88 86#802</p>
-            <p>ads-shanghai@xineurope.com</p>
-        </div>
-        <div class="module-tele-3">
-            <p>投诉：</p>
-            <p>0033(0)146780016</p>
-            <p>tousu@xineurope.com</p>
-        </div>
-        <div class="module-tele-4">
-            <p></p>
-            <p></p>
-        </div>
-    </div>
-    </section>
-
     </div>
 @endsection
 
