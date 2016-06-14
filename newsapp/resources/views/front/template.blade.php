@@ -16,7 +16,7 @@
 </head>
 <body>
 <div id="st-container" class="st-container">
-            <nav class="st-menu st-effect-1 visible-xs" id="menu-1">
+            <nav class="st-menu st-effect-1 visible-xs visible-sm" id="menu-1">
                 <a style='text-decoration:none;' href="/"><h2 class="icon icon-lab">新闻网</h2></a>
                 <ul class="siderbar-text"> 
                     <li class="visible-xs">
@@ -35,7 +35,7 @@
                     @include('front.nav')
                 </ul>
             </nav>
-            <nav class="st-menu st-effect-111 visible-xs" id="menu-1">
+            <nav class="st-menu st-effect-111 visible-xs visible-sm" id="menu-1">
                 <h2 class="icon icon-lab">新欧洲</h2>
                 <ul>
                     <li><a class="icon icon-data" href="http://www.xineurope.com/">门户</a></li>
@@ -92,7 +92,7 @@
             </div>
 {{--Siderbar--}}
                 <div class="main clearfix">
-                    <div id="st-trigger-effects" class="column siderbarnav visible-xs"> 
+                    <div id="st-trigger-effects" class="column siderbarnav visible-xs visible-sm"> 
                         <button data-effect="st-effect-111" class="sb-btn2"><span><img src="/assets/image/link8.png" class="img-responsive"></span></button>
                         <button data-effect="st-effect-1" class="sb-btn1"><span><img src="/assets/image/menu4.png" class="img-responsive"></span></button>
                     </div>  
@@ -100,7 +100,7 @@
         
 {{-- Navigation Bar --}}
 
-            <header class="navbar navbar-default hidden-xs">
+            <header class="navbar navbar-default hidden-xs hidden-sm">
                 <div class="container-fluid">                
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed btn_change" data-toggle="collapse" data-target="#bs-navbar">
@@ -166,16 +166,16 @@
             </dl>
             <dl>
                 <dt>上海(广告):</dt>
-                <dd>tousu@xineurope.com</dd>
-                <dd>0033(0)146780016</dd>
+                <dd>0086 (0)21 60 43 88 86#802</dd>
+                <dd>ads-shanghai@xineurope.com</dd>
             </dl>
             <dl>
                 <dt>投诉/客服</dt>
-                <dd><strong>投诉: </strong>0033 (0)1 46 78 00 16</dd>
-                <dd><strong>客服: </strong>pub@xineurope.com</dd>
+                <dd><strong>投诉: </strong>pub@xineurope.com</dd>
+                <dd><strong>客服: </strong>0033 (0)1 46 78 00 16</dd>
             </dl>
             <dl class="visible-xs">
-                <img src="/assets/image/qrcode.jpg" class="img-responsive img-code-mobile">
+                <dt>关注旅法华人战报(公共微信号)：DailyFR</dt>
             </dl>
         </div>
 

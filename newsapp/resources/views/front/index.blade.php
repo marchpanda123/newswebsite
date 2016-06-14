@@ -13,7 +13,7 @@
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner img-op" role="listbox">
+                    <div class="carousel-inner" role="listbox">
                         @for ($i = 0; $i < count($carousel_news); $i++)
                             <div class="item @if($i==0) active @endif">
                                 <div class="responsive-image">
@@ -330,16 +330,12 @@
                             @endforeach
                         </div>
                         @endif
-
-
-
-
             @endfor
 
             </div>
 
         </div>
-
+    
     </div>
 @endsection
 
