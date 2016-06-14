@@ -233,31 +233,66 @@ body,
 /* Effect 111: Slide in on top */
 .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
+	-webkit-transform: translate3d(150%, 0, 0);
+	transform: translate3d(150%, 0, 0);
+}
+
+.st-effect-111.st-menu-open .st-effect-111.st-menu {
+	visibility: visible;
+	-webkit-transform: translate3d(30%, 0, 0);
+	transform: translate3d(30%, 0, 0);
+}
+
+.st-effect-111.st-menu::after {
+	display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px){
+	.st-effect-111.st-menu {
+	visibility: visible;
+	-webkit-transform: translate3d(150%, 0, 0);
+	transform: translate3d(150%, 0, 0);
+}
+
+.st-effect-111.st-menu-open .st-effect-111.st-menu {
+	visibility: visible;
+	-webkit-transform: translate3d(50%, 0, 0);
+	transform: translate3d(50%, 0, 0);
+}
+
+.st-effect-111.st-menu::after {
+	display: none;
+}
+} 
+
+@media only screen and (min-width: 376px) and (max-width: 435px){
+	.st-effect-111.st-menu {
+	visibility: visible;
+	-webkit-transform: translate3d(175%, 0, 0);
 	transform: translate3d(175%, 0, 0);
 }
 
 .st-effect-111.st-menu-open .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(80%, 0, 0);
+	-webkit-transform: translate3d(75%, 0, 0);
+	transform: translate3d(75%, 0, 0);
 }
 
 .st-effect-111.st-menu::after {
 	display: none;
 }
-
-@media only screen and (min-width: 445px) and (max-width: 520px){
+} 
+@media only screen and (min-width: 436px) and (max-width: 600px){
 	.st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(220%, 0, 0);
-	transform: translate3d(220%, 0, 0);
+	-webkit-transform: translate3d(240%, 0, 0);
+	transform: translate3d(240%, 0, 0);
 }
 
 .st-effect-111.st-menu-open .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(120%, 0, 0);
-	transform: translate3d(120%, 0, 0);
+	-webkit-transform: translate3d(140%, 0, 0);
+	transform: translate3d(140%, 0, 0);
 }
 
 .st-effect-111.st-menu::after {
@@ -265,34 +300,17 @@ body,
 }
 } 
 
-@media only screen and (min-width: 521px) and (max-width: 640px){
+@media only screen and (min-width: 601px) and (max-width: 768px){
 	.st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
-	transform: translate3d(320%, 0, 0);
+	-webkit-transform: translate3d(310%, 0, 0);
+	transform: translate3d(310%, 0, 0);
 }
 
 .st-effect-111.st-menu-open .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(155%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-@media only screen and (min-width: 640px) and (max-width: 768px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
-	transform: translate3d(320%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(215%, 0, 0);
+	-webkit-transform: translate3d(210%, 0, 0);
+	transform: translate3d(210%, 0, 0);
 }
 
 .st-effect-111.st-menu::after {
@@ -300,34 +318,33 @@ body,
 }
 } 
 
-@media only screen and (min-width: 769px) and (max-width: 879px){
+@media only screen and (min-width: 769px) and (max-width: 840px){
 	.st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
-	transform: translate3d(355%, 0, 0);
+	-webkit-transform: translate3d(340%, 0, 0);
+	transform: translate3d(340%, 0, 0);
 }
 
 .st-effect-111.st-menu-open .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(255%, 0, 0);
+	-webkit-transform: translate3d(240%, 0, 0);
+	transform: translate3d(240%, 0, 0);
 }
 
 .st-effect-111.st-menu::after {
 	display: none;
 }
 } 
-
-@media only screen and (min-width: 879px) and (max-width: 991px){
+@media only screen and (min-width: 841px) and (max-width: 991px){
 	.st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
+	-webkit-transform: translate3d(400%, 0, 0);
 	transform: translate3d(400%, 0, 0);
 }
 
 .st-effect-111.st-menu-open .st-effect-111.st-menu {
 	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
+	-webkit-transform: translate3d(300%, 0, 0);
 	transform: translate3d(300%, 0, 0);
 }
 
@@ -335,7 +352,6 @@ body,
 	display: none;
 }
 } 
-
 
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
 .no-csstransforms3d .st-pusher,
