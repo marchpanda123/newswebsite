@@ -102,6 +102,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -118,6 +119,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -160,6 +162,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -176,6 +179,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -217,6 +221,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -233,6 +238,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -273,6 +279,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -289,6 +296,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>
@@ -323,6 +331,7 @@
                                         <div class="article-text">
                                             <h3 class="article-title">{{$article->title}}</h3>
                                             <p class="article-intro">{{$article->intro}}</p>
+                                            <span class="article-intro">{{$article->published_at}}</span>
                                         </div>
                                         <a class="article-link" href="/article/{{$article->article_id}}"></a>
                                     </article>

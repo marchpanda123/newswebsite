@@ -38,7 +38,7 @@ class UserController extends Controller
               $istag = $tag->id;
               if($istag == '2' or $istag == '4' or $istag == '6' or $istag == '8' or $istag == '10'){
                 $tag['articles'] = $tag->articles()
-                ->select('article_id', 'title', 'intro', 'page_image')
+                ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
                 ->published()
                 ->orderBy('published_at', 'desc')
@@ -47,7 +47,7 @@ class UserController extends Controller
               }
               else if($istag == '3' or $istag == '5' or $istag == '7' or $istag == '9' or $istag == '11'){
                 $tag['articles'] = $tag->articles()
-                ->select('article_id', 'title', 'intro', 'page_image')
+                ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
                 ->published()
                 ->orderBy('published_at', 'desc')
@@ -56,7 +56,7 @@ class UserController extends Controller
               }
               else{
               $tag['articles'] = $tag->articles()
-                ->select('article_id', 'title', 'intro', 'page_image')
+                ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
                 ->published()
                 ->orderBy('published_at', 'desc')

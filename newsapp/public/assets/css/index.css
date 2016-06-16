@@ -79,6 +79,9 @@ figure {
 
 img {
   vertical-align: middle;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .img-responsive {
@@ -4945,6 +4948,8 @@ button.close {
     left: 20%;
     right: 20%;
     padding-bottom: 30px;
+    font-size: 20px;
+    opacity: 0.9;
   }
 
   .carousel-indicators {
@@ -5866,6 +5871,7 @@ button.close {
 }
 .logo-img{
   padding-left: 20px;
+  display: inline-block;
 }
 .top-footer{
   width: 200px;
@@ -6191,4 +6197,64 @@ button.close {
   width: 80px;
   height: 80px;
 }
+
+
+/*mianbqo*/
+
+
+ #breadcrumb{ 
+  display: block;
+}
+#breadcrumb ul{ 
+  list-style: none; 
+}
+.crumbs{ 
+  display: inline; 
+  padding-left: 0;
+}
+.crumbs li {
+  display: inline-table; 
+}
+.crumbs li.first { 
+  padding-left: 8px; 
+}
+.crumbs li a, .crumbs li a:link, .crumbs li a:visited {
+ color: #666; 
+ display: block; 
+ float: left; 
+ font-size: 12px; 
+ margin-left: -13px; 
+ margin-bottom: -11px;
+ padding: 7px 17px 11px 25px;
+ position: relative;
+ text-decoration: none; 
+ }
+
+.crumbs li a {
+ background-image: url('/assets/image/bg-crumbs.png');
+ background-repeat: no-repeat; 
+ background-position: 100% 0; 
+ position: relative; 
+}
+.crumbs li a:hover { 
+  color: #333; 
+  background-position: 100% -48px;
+  cursor: pointer; 
+ }
+.crumbs li a:active { 
+  color: #333; 
+  background-position: 100% -96px; 
+}
+.crumbs li.first a span { 
+  height: 29px; 
+  width: 3px; 
+  border-left: 1px solid #d9d9d9; 
+  position: absolute; 
+  top: 0px; 
+  left: 0px; 
+}
+
+.breadafter{
+  display: inline-block;
+} 
 

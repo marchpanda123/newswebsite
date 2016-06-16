@@ -1,15 +1,17 @@
 @extends('front.template')
 @section('content')
 <!-- nav -->
-<ol class="breadcrumb">
-  <li><a href="/">主页</a></li>
-  <li><a href="#">文章</a></li>
-  <li class="active">{{$article->title}}</li>
-</ol>
+<div id="breadcrumb">
+    <ul class="crumbs">
+        <li class="first"><a href="/" style="z-index:9;"><span></span>主页</a></li>
+        <li><a href="#" style="z-index:8;">文章</a></li>
+        <li><a href="#" style="z-index:6;">{{$article->title}}</a></li>
+    </ul>
+    <div class="breadafter"></div>
+</div>
 <!-- content -->
     <div class="news-content">
         <div class="row">
-
             <article class="article-body col-sm-8">
                 <h1>{{$article->title}}</h1>
                 <div class="article-info">
