@@ -36,7 +36,7 @@ class UserController extends Controller
         $index_articles = array();
         foreach ($tags as $tag) {
               $istag = $tag->id;
-              if($istag == '2' or $istag == '4' or $istag == '6' or $istag == '8' or $istag == '10'){
+              if($istag%2 == '0'){
                 $tag['articles'] = $tag->articles()
                 ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
@@ -45,23 +45,15 @@ class UserController extends Controller
                 ->take(2)->get();
               $index_articles[] = $tag;
               }
-              else if($istag == '3' or $istag == '5' or $istag == '7' or $istag == '9' or $istag == '11'){
-                $tag['articles'] = $tag->articles()
-                ->select('article_id', 'title', 'intro', 'page_image','published_at')
-                ->where('is_checked', true)
-                ->published()
-                ->orderBy('published_at', 'desc')
-                ->take(1)->get();
-              $index_articles[] = $tag;
-              }
               else{
               $tag['articles'] = $tag->articles()
                 ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
                 ->published()
                 ->orderBy('published_at', 'desc')
-                ->take(3)->get();
+                ->take(1)->get();
               $index_articles[] = $tag;  
+              
               }
             
         }
