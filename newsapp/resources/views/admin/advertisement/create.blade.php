@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Ads
-                    <small>» Create New Advertisement</small>
+                <h3>广告管理
+                    <small>» 创建新广告</small>
                 </h3>
             </div>
         </div>
@@ -14,7 +14,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">New Ad. Form</h3>
+                        <h3 class="panel-title">新广告创建表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -25,7 +25,7 @@
 
                             <div class="form-group">
                                 <label for="tag" class="col-md-3 control-label">
-                                    Ad. name
+                                    广告名称
                                 </label>
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" name="ad_name" id="name"
@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="ad_url" class="col-md-3 control-label">
-                                    Url
+                                    广告地址
                                 </label>
                                 <div class="col-md-8 input-group">
                                     <span class="input-group-addon" id="basic-addon">http://</span>
@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="image_path" class="col-md-3 control-label">
-                                    Image
+                                    广告图片
                                 </label>
                                 <div class="col-md-4">
                                     <input type="file" class="form-control" name="image"
@@ -58,13 +58,13 @@
                                 </div>
                             </div>
                             <div class="col-md-offset-3">
-                                <em>* We recommend use 570*90</em>
+                                <em>* 我们建议使用 570*90</em>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-7 col-md-offset-3">
                                     <button type="submit" class="btn btn-primary btn-md">
                                         <i class="glyphicon glyphicon-floppy-disk"></i>
-                                        Add New Ad.
+                                        添加广告
                                     </button>
                                 </div>
                             </div>

@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-6">
-                <h3>Article
-                    <small>» List</small>
+                <h3>文章
+                    <small>» 文章列表</small>
                 </h3>
             </div>
         </div>
@@ -19,11 +19,11 @@
                 <table id="posts-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Title</th>
-                        <th>Carousel</th>
-                        <th>Publish_at</th>
-                        <th>Status</th>
-                        <th data-sortable="false">Actions</th>
+                        <th>文章名</th>
+                        <th>轮播</th>
+                        <th>发布时间</th>
+                        <th>状态</th>
+                        <th data-sortable="false">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -32,7 +32,7 @@
                             <td>{{ $article->title }}</td>
                             <td>
                                 @if($article->is_carousel)
-                                    Yes
+                                    是
                                 @endif
                             </td>
                             <td data-order="{{ $article->published_at->timestamp }}">
@@ -41,19 +41,19 @@
                             <td>
                                 @if($article->is_checked===0)
                                     <i class="glyphicon glyphicon-time"></i>
-                                    Under review
+                                    待审核
                                 @elseif($article->is_checked===1)
                                     <i class="glyphicon glyphicon-ok"></i>
-                                    Accepted
+                                    已批准
                                 @else
                                     <i class="glyphicon glyphicon-remove"></i>
-                                    Rejected
+                                    已拒绝
                                 @endif
                             </td>
                             <td>
                                 <a href="/admin/article/{{ $article->id }}" class="btn btn-xs btn-success">
                                     <i class="glyphicon glyphicon-eye-open"></i>
-                                    View
+                                    显示
                                 </a>
                             </td>
                         </tr>

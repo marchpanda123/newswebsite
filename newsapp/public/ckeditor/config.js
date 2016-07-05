@@ -34,4 +34,6 @@ CKEDITOR.editorConfig = function (config) {
 
     config.format_p = {element: 'img', attributes: {'class': 'img-responsive'}};
 
+    config.defaultLanguage = 'zh-cn';
+    //config.language = 'zh-cn';
 };

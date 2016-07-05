@@ -4,13 +4,13 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-6">
-                <h3>Advertisements
-                    <small>» Listing</small>
+                <h3>广告
+                    <small>» 广告列表</small>
                 </h3>
             </div>
             <div class="col-md-6 text-right">
                 <a href="/admin/ad/create" class="btn btn-success btn-md">
-                    <i class="fa fa-plus-circle"></i> New Ads
+                    <i class="fa fa-plus-circle"></i> 添加广告
                 </a>
             </div>
         </div>
@@ -24,9 +24,9 @@
                 <table id="tags-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Advertisement</th>
-                        <th>Publish at</th>
-                        <th data-sortable="false">Actions</th>
+                        <th>广告名</th>
+                        <th>发布时间</th>
+                        <th data-sortable="false">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -36,10 +36,10 @@
                             <td>{{ $ad->created_at }}</td>
                             <td>
                                 <a href="/admin/ad/{{ $ad->id }}/edit" class="btn btn-xs btn-info">
-                                    <i class="glyphicon glyphicon-pencil"></i> Edit
+                                    <i class="glyphicon glyphicon-pencil"></i> 编辑
                                 </a>
                                 <a href="/admin/ad/{{ $ad->id }}" class="btn btn-xs btn-success">
-                                    <i class="glyphicon glyphicon-eye-open"></i> Show
+                                    <i class="glyphicon glyphicon-eye-open"></i> 显示
                                 </a>
                             </td>
                         </tr>

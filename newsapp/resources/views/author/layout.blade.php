@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">{{config('news.title')}} Author</a>
+            <a class="navbar-brand" href="#">{{config('news.title')}} 发布者</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
             @include('author.partials.navbar')

@@ -7,7 +7,7 @@
                 <h3>
                     {{$article->title}}
                 </h3>
-                <img src="{{$article->page_image}}" class="img img_responsive"
+                <img src="{{$article->page_image}}" class="img img-responsive"
                      id="page-image-preview" style="max-height:100px">
                 <ul class="list-inline">
                     @if($article->tags)
@@ -20,7 +20,7 @@
                     @endif
                     <li>
                         <i class="glyphicon glyphicon-time"></i>
-                        Publish_at:
+                        发布于:
                         {{$article->published_at}}
                     </li>
                     <li>
@@ -28,24 +28,24 @@
                         {{$article->user->pen_name}}
                     </li>
                 </ul>
-                <p>Status:
+                <p>状态:
                     @if($article->is_checked===0)
                         <i class="glyphicon glyphicon-time"></i>
-                        Under review
+                        待审核
                     @elseif($article->is_checked===1)
                         <i class="glyphicon glyphicon-ok"></i>
-                        Accepted
+                        已接受
                     @else
                         <i class="glyphicon glyphicon-remove"></i>
-                        Rejected
+                        已拒绝
                     @endif
                 </p>
-                <p>Intro: {{$article->intro}}</p>
-                <p>Carousel:
+                <p>简介: {{$article->intro}}</p>
+                <p>轮播:
                     @if($article->is_carousel)
-                        Yes
+                        是
                     @else
-                        No
+                        否
                     @endif
                 </p>
             </div>
@@ -68,31 +68,31 @@
                                 <button type="submit" class="btn btn-success"
                                         name="action" value="approved">
                                     <i class="glyphicon glyphicon-ok"></i>
-                                    Accepted?
+                                    接受?
                                 </button>
                             @endif
                             @if($article->is_checked===0 || $article->is_checked===1)
                                 <button type="submit" class="btn btn-warning"
                                         name="action" value="unapproved">
                                     <i class="glyphicon glyphicon-remove"></i>
-                                    Rejected?
+                                    拒绝?
                                 </button>
                             @endif
                             <button type="submit" class="btn btn-danger"
                                     name="action" value="review">
                                 <i class="glyphicon glyphicon-time"></i>
-                                Under review?
+                                待审核?
                             </button>
                             @if($article->is_checked===1)
                                 @if($article->is_carousel)
                                     <button type="submit" class="btn btn-info"
                                             name="carousel" value="0">
-                                        Remove carousel
+                                        取消轮播
                                     </button>
                                 @else
                                     <button type="submit" class="btn btn-info"
                                             name="carousel" value="1">
-                                        Set carousel
+                                        设置轮播
                                     </button>
                                 @endif
                             @endif

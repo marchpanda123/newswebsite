@@ -63,5 +63,6 @@ var CKBUILDER_CONFIG = {
 	},
 	languages : {
 		'en' : 1
+		'zh-cn' : 1
 	}
 };

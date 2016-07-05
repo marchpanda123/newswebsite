@@ -5,14 +5,14 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-6">
-                <h3>Tags
-                    <small>» Listing</small>
+                <h3>标签
+                    <small>» 标签列表</small>
                 </h3>
             </div>
             @if(Auth::user()->is_admin)
                 <div class="col-md-6 text-right">
                     <a href="/author/tag/create" class="btn btn-success btn-md">
-                        <i class="fa fa-plus-circle"></i> New Tag
+                        <i class="fa fa-plus-circle"></i> 添加标签
                     </a>
                 </div>
             @endif
@@ -27,7 +27,7 @@
                 <table id="tags-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Tag</th>
+                        <th>标签名</th>
                     </tr>
                     </thead>
                     <tbody>

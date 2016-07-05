@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Users
-                    <small>» Add New User</small>
+                <h3>用户
+                    <small>» 创建新用户</small>
                 </h3>
             </div>
         </div>
@@ -14,7 +14,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">New User Form</h3>
+                        <h3 class="panel-title">新用户表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -26,7 +26,7 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                             <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Username</label>
+                                <label for="name" class="col-md-4 control-label">用户名</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
@@ -35,7 +35,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">密码</label>
 
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password" id="password">
@@ -44,7 +44,7 @@
 
                             <div class="form-group">
                                 <label for="password_confirmation" class="col-md-4 control-label">
-                                    Confirm Password</label>
+                                    确认密码</label>
 
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password_confirmation"
@@ -57,7 +57,7 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox" name="is_admin">
-                                            Is Admin?
+                                            是否是管理员?
                                         </label>
                                     </div>
                                 </div>
@@ -66,7 +66,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Register
+                                        注册
                                     </button>
                                 </div>
                             </div>

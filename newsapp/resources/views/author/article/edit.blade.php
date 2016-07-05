@@ -12,8 +12,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Articles
-                    <small>» Edit Article</small>
+                <h3>文章
+                    <small>» 编辑文章</small>
                 </h3>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Post Edit Form</h3>
+                        <h3 class="panel-title">编辑表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -38,7 +38,7 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="title" class="col-md-2 control-label">
-                                            Title
+                                            文章名
                                         </label>
 
                                         <div class="col-md-10">
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="subtitle" class="col-md-2 control-label">
-                                            Introduction
+                                            文章简介
                                         </label>
 
                                         <div class="col-md-10">
@@ -58,7 +58,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="page_image" class="col-md-2 control-label">
-                                            Page Image
+                                            主页图片
                                         </label>
                                         <div class="col-md-10">
                                             <div class="row">
@@ -80,7 +80,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="content" class="col-md-2 control-label">
-                                            Content
+                                            内容
                                         </label>
 
                                         <div class="col-md-10">
@@ -92,7 +92,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="publish_date" class="col-md-3 control-label">
-                                            Publish Date
+                                            发布日期
                                         </label>
 
                                         <div class="col-md-8">
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="publish_time" class="col-md-3 control-label">
-                                            Publish Time
+                                            发布时间
                                         </label>
 
                                         <div class="col-md-8">
@@ -118,14 +118,14 @@
                                                 <label>
                                                     <input type="checkbox"
                                                            name="is_draft" {{$article->is_draft? 'checked':''}}>
-                                                    Draft?
+                                                    草稿?
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="tags" class="col-md-3 control-label">
-                                            Tags
+                                            标签
                                         </label>
 
                                         <div class="col-md-8">
@@ -148,17 +148,17 @@
                                         <button type="submit" class="btn btn-primary"
                                                 name="action" value="continue">
                                             <i class="glyphicon glyphicon-floppy-disk"></i>
-                                            Save - Continue
+                                            保存 - 继续
                                         </button>
                                         <button type="submit" class="btn btn-success"
                                                 name="action" value="finished">
                                             <i class="glyphicon glyphicon-floppy-disk"></i>
-                                            Save - Finished
+                                            保存 - 结束
                                         </button>
                                         <button type="button" class="btn btn-danger"
                                                 data-toggle="modal" data-target="#modal-delete">
                                             <i class="glyphicon glyphicon-remove"></i>
-                                            Delete
+                                            删除
                                         </button>
                                     </div>
                                 </div>
@@ -176,12 +176,12 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">
                         </button>
-                        <h4 class="modal-title">Please Confirm</h4>
+                        <h4 class="modal-title">请确认</h4>
                     </div>
                     <div class="modal-body">
                         <p class="lead">
                             <i class="fa fa-question-circle fa-lg"></i>
-                            Are you sure you want to delete this Article?
+                            您确定将删除文章吗?
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -189,10 +189,10 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="button" class="btn btn-default"
-                                    data-dismiss="modal">Close
+                                    data-dismiss="modal">关闭
                             </button>
                             <button type="submit" class="btn btn-danger">
-                                <i class="fa fa-times-circle"></i> Yes
+                                <i class="fa fa-times-circle"></i> 是的
                             </button>
                         </form>
                     </div>
@@ -220,7 +220,7 @@
                 formatLabel: 'HH:i'
             });
             $("#tags").selectize({
-                placeholder: "add tag"
+                placeholder: "添加标签"
             });
         });
         CKEDITOR.replace('content');

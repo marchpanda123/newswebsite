@@ -18,7 +18,7 @@ class CheckAdminMiddleware
     {
 
         if (!Auth::check()) {
-            return redirect('/login');
+            return redirect('/xineuropecom');
         } elseif (Auth::user()->isAdmin() !== (bool)$isAdmin) {
             abort(403);
         }

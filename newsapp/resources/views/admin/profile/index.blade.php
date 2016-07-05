@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Users
-                    <small>» Change profile</small>
+                <h3>用户
+                    <small>» 更改用户设置</small>
                 </h3>
             </div>
         </div>
@@ -24,7 +24,7 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                             <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Username</label>
+                                <label for="name" class="col-md-4 control-label">用户名</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="name" id="name"
@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="nickname" class="col-md-4 control-label">Nickname</label>
+                                <label for="nickname" class="col-md-4 control-label">昵称</label>
 
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="nickname" id="nickname"
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="password" class="col-md-4 control-label">Password</label>
+                                <label for="password" class="col-md-4 control-label">密码</label>
 
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password" id="password">
@@ -51,7 +51,7 @@
 
                             <div class="form-group">
                                 <label for="password_confirmation" class="col-md-4 control-label">
-                                    Confirm Password</label>
+                                    确认密码</label>
 
                                 <div class="col-md-6">
                                     <input type="password" class="form-control" name="password_confirmation"
@@ -62,7 +62,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">
-                                        Update
+                                        更新
                                     </button>
                                 </div>
                             </div>

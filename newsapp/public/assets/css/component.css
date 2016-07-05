@@ -142,7 +142,30 @@ body,
 	color: #fff;
 }
 
-@media only screen and (min-width: 319px) and (max-width: 385px){
+@media only screen and (min-width: 319px) and (max-width: 370px){
+	.st-menu h2 {
+	margin: 0;
+	padding: 10px;
+	color:#FFF;
+	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
+	font-weight: 300;
+	font-size: 20px;
+	}
+	.st-menu ul li a {
+	display: block;
+	padding: 0.3em 0.6em 0.3em 0.6em;
+	outline: none;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	color: #f3efe0;
+	text-transform: uppercase;
+	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
+	letter-spacing: 1px;
+	font-weight: 400;
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+}
+@media only screen and (min-width: 371px) and (max-width: 385px){
 	.st-menu h2 {
 	margin: 0;
 	padding: 10px;
@@ -153,7 +176,7 @@ body,
 	}
 	.st-menu ul li a {
 	display: block;
-	padding: 0.6em 0.6em 0.6em 0.8em;
+	padding: 0.6em 0.6em 0.6em 0.6em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
@@ -189,18 +212,18 @@ body,
 }
 
 }
-@media only screen and (min-width: 533px) and (max-width: 736px){
+@media only screen and (min-width: 480px) and (max-width: 736px){
 	.st-menu h2 {
 	margin: 0;
-	padding: 3px;
+	padding: 0.5px;
 	color: rgba(0,0,0,0.4);
 	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
 	font-weight: 300;
-	font-size: 25px;
+	font-size: 20px;
 	}
 	.st-menu ul li a {
 	display: block;
-	padding: 0.2em 0.2em 0.2em 0.2em;
+	padding: 0.05em 0.1em 0.05em 0.1em;
 	outline: none;
 	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
 	color: #f3efe0;
@@ -211,7 +234,19 @@ body,
 	-webkit-transition: background 0.3s, box-shadow 0.3s;
 	transition: background 0.3s, box-shadow 0.3s;
 }
-
+	.st-effect-111 ul li a {
+	display: block;
+	padding: 0.5em 0.1em 0.5em 0.1em;
+	outline: none;
+	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
+	color: #f3efe0;
+	text-transform: uppercase;
+	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
+	letter-spacing: 1px;
+	font-weight: 400;
+	-webkit-transition: background 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, box-shadow 0.3s;
+}
 }
 /* Individual effects */
 /* Effect 1: Slide in on top */

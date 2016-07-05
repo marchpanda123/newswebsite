@@ -4,8 +4,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Ads
-                    <small>» Create New Advertisement</small>
+                <h3>广告管理
+                    <small>» 创建新广告</small>
                 </h3>
             </div>
         </div>
@@ -14,7 +14,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">New Ad. Form</h3>
+                        <h3 class="panel-title">新广告创建表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -24,7 +24,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="form-group">
-                                <label for="tag" class="col-md-3 control-label">Ad. name</label>
+                                <label for="tag" class="col-md-3 control-label">广告名称</label>
 
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" name="ad_name" id="name"
@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="ad_url" class="col-md-3 control-label">
-                                    Url
+                                    广告地址
                                 </label>
                                 <div class="col-md-6 input-group">
                                     <span class="input-group-addon" id="basic-addon">http://</span>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="image_path" class="col-md-3 control-label">
-                                    Image
+                                    广告图片
                                 </label>
                                 <div class="col-md-4">
                                     <input type="file" class="form-control" name="image"
@@ -57,18 +57,18 @@
                                 </div>
                             </div>
                             <div class="col-md-offset-3">
-                                <em>* We recommend use 570*90</em>
+                                <em>* 我们建议使用 570*90</em>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-7 col-md-offset-3">
                                     <button type="submit" class="btn btn-primary btn-md">
                                         <i class="glyphicon glyphicon-floppy-disk"></i>
-                                        Update.
+                                        更新
                                     </button>
                                     <button type="button" class="btn btn-danger btn-md" data-toggle="modal"
                                             data-target="#modal-delete">
                                         <i class="glyphicon glyphicon-remove"></i>
-                                        Delete
+                                        删除
                                     </button>
                                 </div>
                             </div>
@@ -83,20 +83,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Please Confirm</h4>
+                    <h4 class="modal-title">请确认</h4>
                 </div>
                 <div class="modal-body">
                     <p class="lead">
-                        Are you sure you want to delete this ad?
+                        您确认删除广告吗？
                     </p>
                 </div>
                 <div class="modal-footer">
                     <form method="POST" action="/admin/ad/{{ $ad->id }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="DELETE">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                         <button type="submit" class="btn btn-danger">
-                            <i class="glyphicon glyphicon-remove"></i> Yes
+                            <i class="glyphicon glyphicon-remove"></i> 是的
                         </button>
                     </form>
                 </div>

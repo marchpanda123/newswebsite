@@ -39,7 +39,8 @@ Route::get('system/profile', 'User\ProfileController@index');
 Route::post('system/profile', 'User\ProfileController@update');
 
 // Authentication routes...
-Route::get('/login', 'Auth\AuthController@getLogin');
-Route::post('/login', 'Auth\AuthController@postLogin');
-Route::get('/logout', 'Auth\AuthController@getLogout');
+Route::get('/xineuropecom', 'Auth\AuthController@getLogin');
+Route::post('/xineuropecom', 'Auth\AuthController@postLogin');
+Route::get('/xineuropecomout', 'Auth\AuthController@getLogout');
+
 

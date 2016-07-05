@@ -12,8 +12,8 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-12">
-                <h3>Articles
-                    <small>» Add New Article</small>
+                <h3>文章
+                    <small>» 创建新文章</small>
                 </h3>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <div class="col-sm-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">New Article Form</h3>
+                        <h3 class="panel-title">新文章表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -36,7 +36,7 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="title" class="col-md-2 control-label">
-                                            Title
+                                            文章名
                                         </label>
 
                                         <div class="col-md-10">
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="subtitle" class="col-md-2 control-label">
-                                            Introduction
+                                            文章简介
                                         </label>
 
                                         <div class="col-md-10">
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="page_image" class="col-md-2 control-label">
-                                            Page Image
+                                            页面图片
                                         </label>
                                         <div class="col-md-10">
                                             <div class="row">
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="content" class="col-md-2 control-label">
-                                            Content
+                                            内容
                                         </label>
 
                                         <div class="col-md-10">
@@ -89,7 +89,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="publish_date" class="col-md-3 control-label">
-                                            Publish Date
+                                            发布日期
                                         </label>
 
                                         <div class="col-md-8">
@@ -100,7 +100,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="publish_time" class="col-md-3 control-label">
-                                            Publish Time
+                                            发布时间
                                         </label>
 
                                         <div class="col-md-8">
@@ -114,14 +114,14 @@
                                             <div class="checkbox">
                                                 <label>
                                                     <input type="checkbox" name="is_draft" checked>
-                                                    Draft?
+                                                    草稿?
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="tags" class="col-md-3 control-label">
-                                            Tags
+                                            标签
                                         </label>
 
                                         <div class="col-md-8">
@@ -140,7 +140,7 @@
                                 <div class="form-group">
                                     <div class="col-md-10 col-md-offset-2">
                                         <button type="submit" class="btn btn-primary btn-lg">
-                                            Save New Article
+                                            保存新文章
                                         </button>
                                     </div>
                                 </div>
@@ -174,10 +174,14 @@
                 formatLabel: 'HH:i'
             });
             $("#tags").selectize({
-                placeholder: "add tag"
+                placeholder: "添加标签"
             });
+            /*alert( CKEDITOR.lang.languages.zh );*/ // 1
         });
         CKEDITOR.replace('content');
+        /*CKEDITOR.replace( 'content', {
+            language: 'zh-cn'
+        } );*/
         CKEDITOR.config.filebrowserImageUploadUrl = "{{route('author.upload',['_token' => csrf_token() ])}}";
         // add class img-responsive
         CKEDITOR.on('dialogDefinition', function (ev) {

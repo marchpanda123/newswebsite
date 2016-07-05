@@ -31,11 +31,11 @@
                     <!-- Controls -->
                     <a class="left carousel-control" href="#carousel-news-generic" role="button" data-slide="prev">
                         <span class="iconfont iconfont-left">&#xe62c;</span>
-                        <span class="sr-only">Previous</span>
+                        <span class="sr-only">前一个</span>
                     </a>
                     <a class="right carousel-control" href="#carousel-news-generic" role="button" data-slide="next">
                         <span class="iconfont iconfont-right">&#xe662;</span>
-                        <span class="sr-only">Next</span>
+                        <span class="sr-only">后一个</span>
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-6">
@@ -66,70 +66,69 @@
                 @endforeach
             </div>
         </div>
-<!-- Main body -->
+        <!-- Main body -->
         <div class="module-index-article">
             <div class="row">
-                @for($i = 0 ; $i < count($index_articles) ; $i++)
+                @for($i = 0 ; $i < count($index_articles) ; $i++)           
                         @if($i%2 == '0')
                             <div class="module-position"> 
-                            <h2 class="module-title">
-                                <a href="/subject/{{$index_articles[$i]->id}}" class="module-title-link _tag
-                                @if($i=='0') _tag @endif @if($i=='2') _tagsocial @endif @if($i=='4') _tagcult @endif @if($i=='6') _tagfash @endif @if($i=='8') _tagheal @endif @if($i=='10') _tagadd @endif">
+                                <h2 class="module-title">
+                                    <a href="/subject/{{$index_articles[$i]->id}}" class="module-title-link _tag
+                                    @if($i=='0') _tag @endif @if($i=='2') _tagsocial @endif @if($i=='4') _tagcult @endif @if($i=='6') _tagfash @endif @if($i=='8') _tagheal @endif @if($i=='10') _tagadd @endif">
                                     {{$index_articles[$i]->name}}
-                                </a>
-                            </h2>
-                            @if(isset($index_articles[$i+1]))
-                            <h2 class="module-title module_line">/</h2>
-                            <h2 class="module-title module_title">
-                                <a href="/subject/{{$index_articles[$i]->id}}" class="module-title-link">
-                                    {{$index_articles[$i+1]->name}}
-                                </a>
-                            </h2>
-                            @endif
-                            </div>
-                            <div>
-                            <div class="article-layout-flex">
-                                @foreach($index_articles[$i]->articles as $article)
-                                    <div class="article-list col-xs-12 col-sm-4">
-                                        <article class="article-item img-op">
-                                            <div class="article-image responsive-image">
-                                                <img src="{{$article->page_image}}" alt="{{$article->title}}"
-                                                    class="img-responsive">
-                                            </div>
-                                            <div class="article-text">
-                                                <h3 class="article-title">{{$article->title}}</h3>
-                                                <p class="article-intro">{{$article->intro}}</p>
-                                                <span class="article-intro">{{$article->published_at}}</span>
-                                            </div>
-                                            <a class="article-link" href="/article/{{$article->article_id}}"></a>
-                                        </article>
-                                    </div>
-                                @endforeach
+                                    </a>
+                                </h2>
                                 @if(isset($index_articles[$i+1]))
-                                @foreach($index_articles[$i+1]->articles as $article)
-                                    <div class="article-list col-xs-12 col-sm-4">
-                                        <article class="article-item img-op">
-                                            <div class="article-image responsive-image">
-                                                <img src="{{$article->page_image}}" alt="{{$article->title}}"
-                                                    class="img-responsive">
-                                            </div>
-                                            <div class="article-text">
-                                                <h3 class="article-title">{{$article->title}}</h3>
-                                                <p class="article-intro">{{$article->intro}}</p>
-                                                <span class="article-intro">{{$article->published_at}}</span>
-                                            </div>
-                                            <a class="article-link" href="/article/{{$article->article_id}}"></a>
-                                        </article>
-                                    </div>
-                                @endforeach
+                                <h2 class="module-title module_line">/</h2>
+                                <h2 class="module-title module_title">
+                                    <a href="/subject/{{$index_articles[$i]->id}}" class="module-title-link">
+                                        {{$index_articles[$i+1]->name}}
+                                    </a>
+                                </h2>
                                 @endif
                             </div>
+                            <div>
+                                <div class="article-layout-flex">
+                                    @foreach($index_articles[$i]->articles as $article)
+                                        <div class="article-list col-xs-12 col-sm-4">
+                                            <article class="article-item img-op">
+                                                <div class="article-image responsive-image">
+                                                    <img src="{{$article->page_image}}" alt="{{$article->title}}"
+                                                    class="img-responsive">
+                                                </div>
+                                                <div class="article-text">
+                                                    <h3 class="article-title">{{$article->title}}</h3>
+                                                    <p class="article-intro">{{$article->intro}}</p>
+                                                    <span class="article-intro">{{$article->published_at}}</span>
+                                                </div>
+                                                <a class="article-link" href="/article/{{$article->article_id}}"></a>
+                                            </article>
+                                        </div>
+                                    @endforeach
+                                    @if(isset($index_articles[$i+1]))
+                                    @foreach($index_articles[$i+1]->articles as $article)
+                                        <div class="article-list col-xs-12 col-sm-4">
+                                            <article class="article-item img-op">
+                                                <div class="article-image responsive-image">
+                                                    <img src="{{$article->page_image}}" alt="{{$article->title}}"
+                                                        class="img-responsive">
+                                                </div>
+                                                <div class="article-text">
+                                                    <h3 class="article-title">{{$article->title}}</h3>
+                                                    <p class="article-intro">{{$article->intro}}</p>
+                                                    <span class="article-intro">{{$article->published_at}}</span>
+                                                </div>
+                                                <a class="article-link" href="/article/{{$article->article_id}}"></a>
+                                            </article>
+                                        </div>
+                                    @endforeach
+                                    @endif
+                                </div>
                             </div>
                         @endif
                 @endfor
             </div>
         </div>
-    
     </div>
 @endsection
 

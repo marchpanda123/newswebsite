@@ -5,13 +5,13 @@
     <div class="container-fluid">
         <div class="row page-title-row">
             <div class="col-md-6">
-                <h3>Users
-                    <small>» Listing</small>
+                <h3>用户
+                    <small>» 用户列表</small>
                 </h3>
             </div>
             <div class="col-md-6 text-right">
                 <a href="/admin/user/create" class="btn btn-success btn-md">
-                    <i class="fa fa-plus-circle"></i> Add User
+                    <i class="fa fa-plus-circle"></i> 添加用户
                 </a>
             </div>
         </div>
@@ -25,9 +25,9 @@
                 <table id="tags-table" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Username/Nickname</th>
-                        <th>Status</th>
-                        <th data-sortable="false">Actions</th>
+                        <th>用户名/昵称</th>
+                        <th>状态</th>
+                        <th data-sortable="false">操作</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -35,18 +35,18 @@
                         <tr>
                             <td>{{ $user->name }} / {{$user->nick_name}}</td>
                             @if($user->is_admin)
-                                <td>Admin</td>
+                                <td>管理员</td>
                             @else
-                                <td>Author</td>
+                                <td>发布者</td>
                             @endif
                             <td>
                                 @if($user->is_admin)
                                     <button class="btn btn-xs disabled">
-                                        <i class="glyphicon glyphicon-pencil"></i> Edit
+                                        <i class="glyphicon glyphicon-pencil"></i> 编辑
                                     </button>
                                 @else
                                     <a href="/admin/user/{{ $user->id }}/edit" class="btn btn-xs btn-info">
-                                        <i class="glyphicon glyphicon-pencil"></i> Edit
+                                        <i class="glyphicon glyphicon-pencil"></i> 编辑
                                     </a>
                                 @endif
                             </td>
