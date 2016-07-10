@@ -5,7 +5,7 @@
         <div class="row page-title-row">
             <div class="col-md-12">
                 <h3>标签
-                    <small>» 创建新标签</small>
+                    <small>» 创建大标签</small>
                 </h3>
             </div>
         </div>
@@ -14,7 +14,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">新标签表单</h3>
+                        <h3 class="panel-title">大标签表单</h3>
                     </div>
                     <div class="panel-body">
 
@@ -24,7 +24,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                             <div class="form-group">
-                                <label for="tag" class="col-md-3 control-label">标签名</label>
+                                <label for="tag" class="col-md-3 control-label">大标签名</label>
 
                                 <div class="col-md-3">
                                     <input type="text" class="form-control" name="name" id="tag"
@@ -33,34 +33,10 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">在主页显示?</label>
-                                <div class="col-md-3">
-                                    <label class="radio-inline">
-                                        <input name="show_index" id="radio1" value="yes" type="radio">
-                                        是
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input name="show_index" id="radio2" value="no" checked="checked" type="radio">
-                                        否
-                                    </label>
-                                </div>
+                                <label class="col-sm-3 control-label">选择小标签</label>
+                                
                             </div>
 
-                            <div class="form-group">
-                                <label for="labels" class="col-md-3 control-label">
-                                    标签
-                                </label>
-
-                                <div class="col-md-8">
-                                    <select name="labels[]" id="labels" class="form-control" multiple>
-                                        @foreach ($allLabels as $name=>$id)
-                                            <option value="{{ $id }}">
-                                                {{ $name }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
 
                             <div class="form-group">
                                 <div class="col-md-7 col-md-offset-3">

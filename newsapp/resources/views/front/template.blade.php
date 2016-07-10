@@ -15,7 +15,9 @@
 
 </head>
 <body>
+
 <div id="st-container" class="st-container">
+
     <nav class="st-menu st-effect-1 visible-xs visible-sm" id="menu-1">
         <a style='text-decoration:none;' href="/"><h2 class="icon icon-lab">新闻网</h2></a>
             <ul class="siderbar-text"> 
@@ -48,7 +50,9 @@
             </ul>
     </nav>
     <div class="st-pusher">
+
         <div class="st-content"><!-- this is the wrapper for the content -->
+
             <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                 {{-- header nav --}}
@@ -121,6 +125,7 @@
 
                 @yield('content')
 
+                <a href="#0" class="cd-top">Top</a>
                 <div class="linkme">
                     <dl>
                         <dt>巴黎(广告):</dt>
@@ -141,6 +146,8 @@
                         <dt>关注旅法华人战报(公共微信号)：DailyFR</dt>
                     </dl>
                 </div>
+
+
                 <div class="module-footer">
                     <div class="module-footer-inner">
                         <div class="module-footer-content">
@@ -158,6 +165,7 @@
                 </div>
             @yield('scripts')
             </div><!-- /st-content-inner -->
+
         </div><!-- /st-content -->
     </div><!-- /st-pusher -->
 </div><!-- /st-container --> 
@@ -166,5 +174,6 @@
 <script src="/assets/js/classie.js"></script>
 <script src="/assets/js/modernizr.custom.js"></script>
 <script src="/assets/js/sidebarEffects.js"></script>  
+
 </body>
 </html>

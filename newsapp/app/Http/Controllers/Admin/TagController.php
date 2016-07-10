@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Tag;
+use App\Label;
+use DB;
 
 use App\Http\Requests;
 use App\Http\Requests\TagCreateUpdateRequest;
@@ -24,8 +26,13 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = Tag::all();
-        return view('admin.tag.index')->withTags($tags);
+        $labels = Label::all();
+
+        return view('admin.tag.index')->withLabels($labels)
+        ->withTags(DB::table('tags')->leftJoin('label_tag', 'tags.id', '=', 'label_tag.tag_id')
+            ->whereNull('label_tag.id')
+            ->select('tags.id', 'tags.name')
+            ->get());
     }
 
     /**
@@ -36,7 +43,8 @@ class TagController extends Controller
     public function create()
     {
         $data = old($this->name);
-        return view('admin.tag.create')->with('name', $data);
+        $allLabels = Label::lists('id', 'name');
+        return view('admin.tag.create', compact('fields'))->with('allLabels', $allLabels)->with('name',$data);
     }
 
     /**
@@ -48,6 +56,7 @@ class TagController extends Controller
     public function store(TagCreateUpdateRequest $request)
     {
         $tag = Tag::create($request->tagFillData());
+        $tag->syncLabels($request->input('labels', []));
         return redirect('/admin/tag')
             ->withSuccess("The tag '$tag->name' was created.");
     }
@@ -61,7 +70,9 @@ class TagController extends Controller
     public function edit($id)
     {
         $tag = Tag::findOrFail($id);
-        $data = ['id' => $id, 'name' => $tag->name, 'show_index' => $tag->show_index];
+        $allLabels = Label::lists('id', 'name')->all();
+        $labels = $tag->labels()->lists('label_id')->all();
+        $data = ['id' => $id, 'name' => $tag->name, 'show_index' => $tag->show_index, 'allLabels' => $allLabels, 'labels' => $labels];
         return view('admin.tag.edit', $data);
     }
 
@@ -77,6 +88,7 @@ class TagController extends Controller
         $tag = Tag::findOrFail($id);
         $tag->fill($request->tagFillData());
         $tag->save();
+        $tag->syncLabels($request->get('labels', []));
         return redirect('/admin/tag')
             ->withSuccess("Changes saved.");
     }

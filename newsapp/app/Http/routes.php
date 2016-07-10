@@ -30,6 +30,7 @@ Route::resource('admin/ad', 'Admin\AdController');
 Route::post('admin/ad/{id}', 'Admin\AdController@update');
 Route::resource('admin/article', 'Admin\ArticleController', ['only' => ['index', 'show', 'update']]);
 Route::resource('admin/tag', 'Admin\TagController', ['except' => ['show']]);
+Route::resource('admin/label', 'Admin\LabelController', ['except' => ['index', 'show']]);
 Route::resource('admin/user', 'Admin\UserController');
 
 // Routes for the authors

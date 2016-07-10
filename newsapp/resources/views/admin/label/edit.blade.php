@@ -5,7 +5,7 @@
         <div class="row page-title-row">
             <div class="col-md-12">
                 <h3>标签
-                    <small>» 编辑标签</small>
+                    <small>» 编辑大标签</small>
                 </h3>
             </div>
         </div>
@@ -14,14 +14,14 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">标签编辑表单</h3>
+                        <h3 class="panel-title">大标签编辑表单</h3>
                     </div>
                     <div class="panel-body">
 
                         @include('admin.partials.errors')
                         @include('admin.partials.success')
 
-                        <form class="form-horizontal" role="form" method="POST" action="/admin/tag/{{ $id }}">
+                        <form class="form-horizontal" role="form" method="POST" action="/admin/label/{{ $id }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <input type="hidden" name="_method" value="PUT">
 
@@ -35,29 +35,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label">在主页显示?</label>
-                                <div class="col-md-3">
-                                    <label class="radio-inline">
-                                        <input name="show_index" id="radio1" value="yes" type="radio"
-                                               @if($show_index) checked @endif>
-                                        是
-                                    </label>
-                                    <label class="radio-inline">
-                                        <input name="show_index" id="radio2" value="no" type="radio"
-                                               @if(!$show_index) checked @endif>
-                                        否
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="labels" class="col-md-3 control-label">
+                                <label for="tags" class="col-md-3 control-label">
                                     标签
                                 </label>
 
                                 <div class="col-md-8">
-                                    <select name="labels[]" id="labels" class="form-control" multiple>
-                                        @foreach ($allLabels as $name=>$id)
-                                            <option @if (in_array($id, $labels)) selected
+                                    <select name="tags[]" id="tags" class="form-control" multiple>
+                                        @foreach ($allTags as $name=>$id)
+                                            <option @if (in_array($id, $tags)) selected
                                                             @endif
                                                             value="{{ $id }}">
                                                 {{ $name }}
@@ -66,6 +51,7 @@
                                     </select>
                                 </div>
                             </div>
+                            
                             <div class="form-group">
                                 <div class="col-md-7 col-md-offset-3">
                                     <button type="submit" class="btn btn-primary btn-md">
