@@ -48,7 +48,7 @@
                             @foreach ($label->tags as $tag)
                                 <tr>
                                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ $tag->name }}</td>
-                                    <td></td>
+                                    <td>{{$tag->show_index == true ? '是' : ''}}</td>
                                     <td>
                                         <a href="/admin/tag/{{ $tag->id }}/edit" class="btn btn-xs btn-info">
                                             <i class="glyphicon glyphicon-pencil"></i> 编辑
@@ -67,10 +67,15 @@
                             <td></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <th>未分类的小标签</th>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         @foreach ($tags as $tag)
                             <tr>
                                 <td>{{ $tag->name }}</td>
-                                <td></td>
+                                <td>{{$tag->show_index == true ? '是' : ''}}</td>
                                 <td>
                                     <a href="/admin/tag/{{ $tag->id }}/edit" class="btn btn-xs btn-info">
                                         <i class="glyphicon glyphicon-pencil"></i> 编辑

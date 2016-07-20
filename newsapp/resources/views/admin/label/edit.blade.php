@@ -85,7 +85,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <form method="POST" action="/admin/label/{{ $id }}">
+                    <form method="POST" action="/admin/label/{{ $label->id }}">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="hidden" name="_method" value="DELETE">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

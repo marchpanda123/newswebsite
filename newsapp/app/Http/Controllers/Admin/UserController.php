@@ -47,7 +47,7 @@ class UserController extends Controller
         $user = User::create($request->userFillData());
         return redirect()
             ->route('admin.user.index')
-            ->withSuccess("New User '$user->name' Successfully Created.");
+            ->withSuccess("新用户 '$user->name' 成功创建");
     }
 
     /**
@@ -90,7 +90,7 @@ class UserController extends Controller
         $user->save();
         return redirect()
             ->route('admin.user.index')
-            ->withSuccess("User '$user->name' update success");
+            ->withSuccess("用户名 '$user->name' 更新成功");
     }
 
     /**
@@ -105,6 +105,6 @@ class UserController extends Controller
         $user->delete();
         return redirect()
             ->route('admin.user.index')
-            ->withSuccess("User '.$user->name.' deleted");
+            ->withSuccess("用户 '.$user->name.' 已删除");
     }
 }

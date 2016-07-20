@@ -21,7 +21,7 @@
     <nav class="st-menu st-effect-1 visible-xs visible-sm" id="menu-1">
         <a style='text-decoration:none;' href="/"><h2 class="icon icon-lab">新闻网</h2></a>
             <ul class="siderbar-text"> 
-                <li class="visible-xs">
+                <li class="visible-xs visible-sm">
                 <form action="/search" method="GET" role="search">
                     <div class="input-group">
                         <input type="text" class="form-control" name="q" placeholder="Search">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="top-middle"></div>
-                    <a class="logo-img" href="/"><img src="/assets/image/logo hw.png"></a>
+                    <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
                 </div>
 
                 {{--Siderbar--}}
@@ -126,6 +126,7 @@
                 @yield('content')
 
                 <a href="#0" class="cd-top">Top</a>
+
                 <div class="linkme">
                     <dl>
                         <dt>巴黎(广告):</dt>
@@ -134,7 +135,7 @@
                     </dl>
                     <dl>
                         <dt>上海(广告):</dt>
-                        <dd>0086 (0)21 60 43 88 86#802</dd>
+                        <dd>0086 (0)21 60 43 88 86 #802</dd>
                         <dd>ads-shanghai@xineurope.com</dd>
                     </dl>
                     <dl>
@@ -147,6 +148,7 @@
                     </dl>
                 </div>
 
+                <div id="gradline"></div>
 
                 <div class="module-footer">
                     <div class="module-footer-inner">
@@ -165,7 +167,7 @@
                 </div>
             @yield('scripts')
             </div><!-- /st-content-inner -->
-
+            
         </div><!-- /st-content -->
     </div><!-- /st-pusher -->
 </div><!-- /st-container --> 

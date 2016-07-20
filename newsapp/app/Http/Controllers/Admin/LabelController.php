@@ -41,7 +41,7 @@ class LabelController extends Controller
         $label = Label::create($request->labelFillData());
         $label->syncTags($request->input('tags', []));
         return redirect('/admin/tag')
-            ->withSuccess("The label '$label->name' was created.");
+            ->withSuccess("大标签 '$label->name' 已创建");
     }
 
     /**
@@ -55,7 +55,7 @@ class LabelController extends Controller
         $label = Label::findOrFail($id);
         $allTags = Tag::lists('id', 'name')->all();
         $tags = $label->tags()->lists('tag_id')->all();
-        $data = ['id' => $id, 'name' => $label->name, 'allTags' => $allTags, 'tags' => $tags];
+        $data = ['id' => $id, 'name' => $label->name, 'allTags' => $allTags, 'tags' => $tags, 'label' => $label];
 
         return view('admin.label.edit', $data);
     }
@@ -74,7 +74,7 @@ class LabelController extends Controller
         $label->save();
         $label->syncTags($request->get('tags', []));
         return redirect('/admin/tag')
-            ->withSuccess("Changes saved.");
+            ->withSuccess("已修改");
     }
 
     /**
@@ -86,8 +86,9 @@ class LabelController extends Controller
     public function destroy($id)
     {
         $label = Label::findOrFail($id);
+        $label->tags()->detach();
         $label->delete();
         return redirect('/admin/tag')
-            ->withSuccess("The '$label->name' label has been deleted");
+            ->withSuccess("标签 '$label->name' 已删除");
     }
 }

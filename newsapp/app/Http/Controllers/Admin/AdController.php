@@ -50,7 +50,7 @@ class AdController extends Controller
         $ad->image_path = $request->get('image_path');
         $ad->save();
         return redirect('/admin/ad')
-            ->withSuccess("The ad. '$ad->name' was created.");
+            ->withSuccess("广告 '$ad->name' 已创建.");
     }
 
     /**
@@ -93,7 +93,7 @@ class AdController extends Controller
         $ad->image_path = $request->get('image_path');
         $ad->save();
         return redirect('/admin/ad')
-            ->withSuccess($ad->name . " changes saved.");
+            ->withSuccess($ad->name . " 修改已保存");
     }
 
     /**
@@ -107,6 +107,6 @@ class AdController extends Controller
         $ad = Ad::findOrFail($id);
         $ad->delete();
         return redirect('/admin/ad')
-            ->withSuccess("The '$ad->name' has been deleted");
+            ->withSuccess(" '$ad->name'已删除");
     }
 }

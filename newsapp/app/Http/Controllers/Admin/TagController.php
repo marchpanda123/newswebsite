@@ -31,7 +31,7 @@ class TagController extends Controller
         return view('admin.tag.index')->withLabels($labels)
         ->withTags(DB::table('tags')->leftJoin('label_tag', 'tags.id', '=', 'label_tag.tag_id')
             ->whereNull('label_tag.id')
-            ->select('tags.id', 'tags.name')
+            ->select('tags.id', 'tags.name','tags.show_index')
             ->get());
     }
 
@@ -58,7 +58,7 @@ class TagController extends Controller
         $tag = Tag::create($request->tagFillData());
         $tag->syncLabels($request->input('labels', []));
         return redirect('/admin/tag')
-            ->withSuccess("The tag '$tag->name' was created.");
+            ->withSuccess("小标签 '$tag->name' 已创建");
     }
 
     /**
@@ -72,7 +72,7 @@ class TagController extends Controller
         $tag = Tag::findOrFail($id);
         $allLabels = Label::lists('id', 'name')->all();
         $labels = $tag->labels()->lists('label_id')->all();
-        $data = ['id' => $id, 'name' => $tag->name, 'show_index' => $tag->show_index, 'allLabels' => $allLabels, 'labels' => $labels];
+        $data = ['id' => $id, 'name' => $tag->name, 'show_index' => $tag->show_index, 'allLabels' => $allLabels, 'labels' => $labels, 'tag' => $tag];
         return view('admin.tag.edit', $data);
     }
 
@@ -90,7 +90,7 @@ class TagController extends Controller
         $tag->save();
         $tag->syncLabels($request->get('labels', []));
         return redirect('/admin/tag')
-            ->withSuccess("Changes saved.");
+            ->withSuccess("已修改");
     }
 
     /**
@@ -102,8 +102,9 @@ class TagController extends Controller
     public function destroy($id)
     {
         $tag = Tag::findOrFail($id);
+        $tag->labels()->detach();
         $tag->delete();
         return redirect('/admin/tag')
-            ->withSuccess("The '$tag->name' tag has been deleted");
+            ->withSuccess("标签 '$tag->name' 已删除");
     }
 }

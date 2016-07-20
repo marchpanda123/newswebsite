@@ -3,9 +3,9 @@
 <!-- nav -->
 <ul id="breadcrumbs-one">
     <li><a href="/">主页</a></li>
-    @foreach($article->tags as $tag)
+    <!-- @foreach($article->tags as $tag)
     <li><a href="/subject/{{$tag->id}}">{{$tag->name}}</a></li>
-    @endforeach
+    @endforeach -->
     <li><a href="">{{$article->title}}</a></li>
 </ul>
 <!-- content -->
@@ -22,12 +22,27 @@
                     <li>{{$article->publish_date}}</li>
                     <li>{{$article->publish_time}}</li>
                 </ul>
+                <a href="#shareget" class="share-to"><img src="/assets/image/shareto.png" class="sharetoimg"><span>分享</span></a>
                 <p>{{$article->intro}}</p>
+                
             </div>
             <div>
                 {!! $article->content !!}
             </div>
+            <!--MOB SHARE BEGIN-->
+            <p class="share-sty" id="shareget">分享此项报道</p>
+            <ul class="-mob-share-list">
+                <li class="-mob-share-weibo"><img src="/assets/image/share-sina.png"></li>
+                <li class="-mob-share-qzone"><img src="/assets/image/share-qzone.png"></li>
+                <li class="-mob-share-weixin"><img src="/assets/image/share-weixin.png"></li>
+                <li class="-mob-share-douban"><img src="/assets/image/share-db.png"></li>
+                <li class="-mob-share-facebook"><img src="/assets/image/share-fb.png"></li>
+                <li class="-mob-share-twitter"><img src="/assets/image/share-twitter.png"></li>
+            </ul>
+            <!--MOB SHARE END-->
+            <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=14dd4b3814132"></script>
         </article>
+
 
         <div class="col-sm-4 article-right hidden-xs">
             <div class="article-container">

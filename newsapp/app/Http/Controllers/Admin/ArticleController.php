@@ -65,6 +65,6 @@ class ArticleController extends Controller
         $article->save();
         return redirect()
             ->route('admin.article.index')
-            ->withSuccess($article->title . 'has been changed');
+            ->withSuccess($article->title . '已修改');
     }
 }

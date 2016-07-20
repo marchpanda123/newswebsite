@@ -60,7 +60,7 @@ class ArticleController extends Controller
         $article->syncTags($request->input('tags', []));
         return redirect()
             ->route('author.article.index')
-            ->withSuccess("New Article '$article->title' Successfully Created.");
+            ->withSuccess("新文章 '$article->title' 成功创建");
     }
 
     /**
@@ -114,12 +114,12 @@ class ArticleController extends Controller
         if ($request->action === 'continue') {
             return redirect()
                 ->back()
-                ->withSuccess(' article saved.');
+                ->withSuccess(' 文章已保存');
         }
 
         return redirect()
             ->route('author.article.index')
-            ->withSuccess('article <' . $article->title . '> saved.');
+            ->withSuccess('文章 <' . $article->title . '> 已保存.');
     }
 
     /**
@@ -136,6 +136,6 @@ class ArticleController extends Controller
 
         return redirect()
             ->route('author.article.index')
-            ->withSuccess("Article '$article->title' deleted");
+            ->withSuccess("文章 '$article->title' 已删除");
     }
 }

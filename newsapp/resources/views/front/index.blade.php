@@ -56,6 +56,7 @@
                 </div>
             </div>
         </div>
+
         <div class="module-ads">
             <div class="row">
                 @foreach($ads as $ad)
@@ -81,7 +82,7 @@
                                 @if(isset($index_articles[$i+1]))
                                 <h2 class="module-title module_line">/</h2>
                                 <h2 class="module-title module_title">
-                                    <a href="/subject/{{$index_articles[$i]->id}}" class="module-title-link">
+                                    <a href="/subject/{{$index_articles[$i+1]->id}}" class="module-title-link">
                                         {{$index_articles[$i+1]->name}}
                                     </a>
                                 </h2>

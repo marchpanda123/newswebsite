@@ -437,7 +437,7 @@ a.bg-danger:focus {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
 
 ul ul,
@@ -3269,6 +3269,7 @@ tbody.collapse.in {
   display: table;
   border-collapse: separate;
   padding-top: 8px;
+
 }
 @media (min-width: 911px){
 .input-group {
@@ -3279,6 +3280,16 @@ tbody.collapse.in {
   left: 30px;
   }
 }
+@media screen and (min-width: 911px) and (max-width: 991px){
+.input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  padding-top: 8px;
+  left: 0;
+  }
+}
+
 
 .input-group[class*="col-"] {
   float: none;
@@ -3293,6 +3304,17 @@ tbody.collapse.in {
   width: 160px;
   margin-bottom: 0;
 }
+@media (max-width: 911px){
+.input-group .form-control {
+  position: relative;
+  z-index: 2;
+  float: right;
+  width: 200px;
+  margin-bottom: 0;
+  }
+}
+
+
 
 @media screen and (min-width: 991px) and (max-width: 1080px){
 .input-group .form-control {
@@ -4932,16 +4954,20 @@ button.close {
 
 .carousel-caption {
   position: absolute;
-  left: 15%;
-  right: 15%;
-  bottom: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+  background-color: #6ca1dd;
 }
+
+
 
 .carousel-caption .btn {
   text-shadow: none;
@@ -4965,13 +4991,14 @@ button.close {
   }
 
   .carousel-caption {
-    left: 20%;
-    right: 20%;
+    left: 0;
+    right: 0;
     padding-bottom: 30px;
     font-size: 20px;
-    opacity: 0.9;
+    opacity: 0.8;
+    background-color:#6ca1dd;
   }
-
+ 
   .carousel-indicators {
     bottom: 20px;
   }
@@ -5871,7 +5898,7 @@ ul{
 
 .bdNavbtntext{
   color: #FFF;
-  font-size:12px;
+  font-size:13px;
   margin-left: 1px;
   margin-top: 2px;
   font-family: Microsoft YaHei;
@@ -5915,6 +5942,7 @@ ul{
   position: absolute;
   right: 100px;
   color: #707070;
+  font-size: 14px;
 }
 .top-text-xcode:hover{
   cursor: pointer;
@@ -5925,10 +5953,62 @@ ul{
     width: 200px;
     height: 20px;
 }
-.logo-img{
-  padding-left: 20px;
+.logo-img1{
+  padding-top: 10px;
+  padding-left: 45px;
+  padding-bottom: 5px;
   display: inline-block;
 }
+.logo-img2{
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+#logo1{
+  padding-right: 0px;
+}
+
+#logo2{
+  padding-left: 0px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .top-middle{
+      width: 200px;
+      height: 10px;
+  }
+  .logo-img1{
+    padding-left: 5px;
+    display: inline-block;
+    width: 34%;
+  }
+  .logo-img2{
+    padding-left: 0px;
+    display: inline-block;
+    width: 66%;
+    padding-right: 5px;
+  }
+  #logo1{
+    padding-right: 0px;
+  }
+
+  #logo2{
+    padding-left: 0px;
+  }
+  
+
+}
+
+@media screen and (max-width: 360px) {
+  
+
+}
+
+
+
 .top-footer{
   width: 200px;
   height: 5px;
@@ -6059,14 +6139,14 @@ ul{
   padding: 3px 1px;
 }
 .module-footer-right{
-  font-size: 8px;
+  font-size: 10px;
   padding: 5px;
   text-align: center;
   width: 100%;
   height: 20px;
 }
 .module-footer-copyright{
-  font-size: 15px;
+  font-size: 16px;
   padding: 5px;
   text-align: center;
   width: 100%;
@@ -6108,8 +6188,8 @@ ul{
     background: #ffffff;
     margin: 0 auto 12px;
     border: 1px solid #B2B0B0;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .linkme dl {
     display: inline-block;
@@ -6159,7 +6239,7 @@ ul{
 @media screen and (max-width: 600px) {
 .linkme{
     overflow: hidden;
-    width: 960px;
+    width: 100%;
     margin: 0 auto 12px;
     border: none;
     margin-bottom: 10px;
@@ -6302,7 +6382,7 @@ ul{
   opacity: .5;
 }
 .no-touch .cd-top:hover {
-  background-color: #e86256;
+  background-color: #6ca1dd;
   opacity: 1;
 }
 @media only screen and (min-width: 768px) {
@@ -6319,4 +6399,68 @@ ul{
     right: 30px;
     bottom: 30px;
   }
+}
+
+/*gradline*/
+
+#gradline {
+    height: 2px;
+    background: -webkit-linear-gradient(left, red , white , blue); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, red , white , blue); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, red , white , blue); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, red , white , blue);
+  }
+
+/*share*/
+/* .-mob-share-weibo {
+background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!important;
+}
+
+.share-mob ul{
+  display: inline-block;
+} */
+
+.-mob-share-list li{
+  float: left;
+}
+
+.-mob-share-list li img{
+  margin-right: 8px;
+  margin-top:4px;
+  width: 90px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.share-sty{
+  font-family: Microsoft Yahei;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  margin-top: 20px;
+}
+
+.share-to{
+  float: right;
+  width: 70px;
+  height: 25px;
+  background-color: #68bf22;
+  margin-left: 20px;
+}
+.share-to:hover{
+  text-decoration: none;
+}
+.share-to > span{
+  font-size: 13px;
+  line-height: 25px;
+  padding-right:13px;
+  padding-left: 10px;
+  color: #fff;
+}
+.sharetoimg{
+  display: inline-block;
+  padding-left: 5px;
+  width: 15px;
+  height: 15px;
 }
