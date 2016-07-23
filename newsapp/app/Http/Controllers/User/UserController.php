@@ -106,7 +106,10 @@ class UserController extends Controller
     {
         $keyword = $requests->get('q');
         $results = null;
-        if (isset($keyword) || trim($keyword) != "") {
+        if (empty($keyword)) {
+            return redirect('/');
+        }
+        if (isset($keyword) && trim($keyword) != "") {
             $results = Article::select('id', 'title', 'intro', 'page_image')
                 ->where('title', 'LIKE', '%' . $keyword . '%')
                 ->where('is_checked', true)

@@ -1199,6 +1199,7 @@ pre code {
   }
 }
 
+
 @media (min-width: 992px) {
   .col-md-1,
   .col-md-2,
@@ -4960,7 +4961,7 @@ button.close {
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #fff;
+  color:floralwhite;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
   opacity: 0.8;
@@ -5466,7 +5467,7 @@ button.close {
   padding: 0 5px 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .module {
     margin-bottom: 10px;
     width: 100%;
@@ -6464,3 +6465,54 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   width: 15px;
   height: 15px;
 }
+
+
+/*no-result*/
+.no-result{
+  padding-left: 11.5%;
+}
+@media screen and (min-width: 1000px){
+  .no-result-img{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #B2B0B0;
+    width: 960px;
+  }
+}
+.no-result-img span{
+  padding-left: 5px;
+  line-height: 30px;
+  color: #666666;
+}
+.no-result-img img{
+  display: inline-block;
+  width: 20px;
+  height:20px;
+}
+.no-result-text{
+  padding-top: 20px;
+  font-weight: bold;
+}
+.no-result-sus{
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.noresultul{
+  padding-left: 15px;
+  margin-left: 15px;
+  list-style:disc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

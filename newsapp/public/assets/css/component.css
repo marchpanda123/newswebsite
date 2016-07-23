@@ -10,7 +10,7 @@ body,
 .st-container,
 .st-pusher,
 .st-content {
-	height:100%; 
+	height: 100%; 
 	font-family: "宋体";
 }
 /* @media screen and (min-width: 700px) {
@@ -19,14 +19,15 @@ body,
 html{
 	-webkit-overflow-scrolling: touch;
 }
+
 .st-content {
-	overflow-y: scroll;
-} 
+	overflow-y: scroll; 
+	/* background: #f3efe0; */
+}
 .st-menu {
 	overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
+	-webkit-overflow-scrolling: touch;
 }
-
 .st-content,
 .st-content-inner {
 	position: relative;
@@ -118,7 +119,10 @@ html{
 
 .st-menu h2 {
 	margin: 0;
-	padding: 1em;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 10px;
 	color: #FFF;
 	/*color: rgba(0,0,0,0.4);*/
 	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
@@ -150,112 +154,6 @@ html{
 	color: #fff;
 }
 
-@media only screen and (min-width: 319px) and (max-width: 370px){
-	.st-menu h2 {
-	margin: 0;
-	padding: 10px;
-	color:#FFF;
-	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
-	font-weight: 300;
-	font-size: 20px;
-	}
-	.st-menu ul li a {
-	display: block;
-	padding: 0.3em 0.6em 0.3em 0.6em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-}
-}
-@media only screen and (min-width: 371px) and (max-width: 385px){
-	.st-menu h2 {
-	margin: 0;
-	padding: 10px;
-	color:#FFF;
-	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
-	font-weight: 300;
-	font-size: 25px;
-	}
-	.st-menu ul li a {
-	display: block;
-	padding: 0.9em 0.6em 0.9em 0.6em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-}
-}
-@media only screen and (min-width: 386px) and (max-width: 413px){
-	.st-menu h2 {
-	margin: 0;
-	padding: 10px;
-	color: #FFF;
-	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
-	font-weight: 300;
-	font-size: 25px;
-	}
-	.st-menu ul li a {
-	display: block;
-	padding: 0.7em 0.7em 0.7em 1em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-}
-
-}
-@media only screen and (min-width: 480px) and (max-width: 736px){
-	.st-menu h2 {
-	margin: 0;
-	padding: 0.5px;
-	color: rgba(0,0,0,0.4);
-	/* text-shadow: 0 0 1px rgba(0,0,0,0.1); */
-	font-weight: 300;
-	font-size: 20px;
-	}
-	.st-menu ul li a {
-	display: block;
-	padding: 0.05em 0.1em 0.05em 0.1em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-}
-	.st-effect-111 ul li a {
-	display: block;
-	padding: 0.5em 0.1em 0.5em 0.1em;
-	outline: none;
-	box-shadow: inset 0 -1px rgba(0,0,0,0.2);
-	color: #f3efe0;
-	text-transform: uppercase;
-	/* text-shadow: 0 0 1px rgba(255,255,255,0.1); */
-	letter-spacing: 1px;
-	font-weight: 400;
-	-webkit-transition: background 0.3s, box-shadow 0.3s;
-	transition: background 0.3s, box-shadow 0.3s;
-}
-}
 /* Individual effects */
 /* Effect 1: Slide in on top */
 .st-effect-1.st-menu {
@@ -273,128 +171,7 @@ html{
 .st-effect-1.st-menu::after {
 	display: none;
 }
-/* Effect 111: Slide in on top */
-.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(150%, 0, 0);
-}
 
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(30%, 0, 0);
-	transform: translate3d(30%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-
-@media only screen and (min-width: 320px) and (max-width: 375px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(150%, 0, 0);
-	transform: translate3d(150%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(50%, 0, 0);
-	transform: translate3d(50%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-
-@media only screen and (min-width: 376px) and (max-width: 435px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(175%, 0, 0);
-	transform: translate3d(175%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(75%, 0, 0);
-	transform: translate3d(75%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-@media only screen and (min-width: 436px) and (max-width: 600px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(240%, 0, 0);
-	transform: translate3d(240%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(140%, 0, 0);
-	transform: translate3d(140%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-
-@media only screen and (min-width: 601px) and (max-width: 768px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(310%, 0, 0);
-	transform: translate3d(310%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(210%, 0, 0);
-	transform: translate3d(210%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-
-@media only screen and (min-width: 769px) and (max-width: 840px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(340%, 0, 0);
-	transform: translate3d(340%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(240%, 0, 0);
-	transform: translate3d(240%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
-@media only screen and (min-width: 841px) and (max-width: 991px){
-	.st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(400%, 0, 0);
-	transform: translate3d(400%, 0, 0);
-}
-
-.st-effect-111.st-menu-open .st-effect-111.st-menu {
-	visibility: visible;
-	-webkit-transform: translate3d(300%, 0, 0);
-	transform: translate3d(300%, 0, 0);
-}
-
-.st-effect-111.st-menu::after {
-	display: none;
-}
-} 
 
 /* Fallback example for browsers that don't support 3D transforms (and no JS fallback) */
 .no-csstransforms3d .st-pusher,

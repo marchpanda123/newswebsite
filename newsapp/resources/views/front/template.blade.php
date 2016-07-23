@@ -4,27 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{{config('news.title')}}</title>
-
     <link href="/assets/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
-
     @yield('styles')
-
 </head>
 <body>
 
 <div id="st-container" class="st-container">
-
     <nav class="st-menu st-effect-1 visible-xs visible-sm" id="menu-1">
         <a style='text-decoration:none;' href="/"><h2 class="icon icon-lab">新闻网</h2></a>
             <ul class="siderbar-text"> 
                 <li class="visible-xs visible-sm">
                 <form action="/search" method="GET" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="q" placeholder="Search">
+                        <input type="text" class="form-control" name="q" placeholder="搜索">
                         <span class="input-group-btn">
                         <button class="btn btn-primary" type="submit">
                             <span class="iconfont">&#xe674;</span>
@@ -35,8 +30,6 @@
                 </li>
                 @include('front.nav')
             </ul>
-    </nav>
-    <nav class="st-menu st-effect-111 visible-xs visible-sm" id="menu-1">
         <h2 class="icon icon-lab">新欧洲</h2>
             <ul>
                 <li><a href="http://www.xineurope.com/"><span class="imgicon"><img src="/assets/image/link.png" class="img-responsive"></span>门户</a></li>
@@ -50,9 +43,7 @@
             </ul>
     </nav>
     <div class="st-pusher">
-
         <div class="st-content"><!-- this is the wrapper for the content -->
-
             <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                 {{-- header nav --}}
@@ -73,7 +64,6 @@
                         <div class="bdNavbtnbar"><span class="bdNavbtntext">新欧洲</span></div>
                     </div>
                 </div>
-
                 {{-- logo Bar --}}
                 <div>
                     <div class="top-blank"></div>
@@ -89,17 +79,14 @@
                     <div class="top-middle"></div>
                     <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
                 </div>
-
                 {{--Siderbar--}}
                 <div class="main clearfix">
                     <div id="st-trigger-effects" class="column siderbarnav visible-xs visible-sm"> 
-                        <button data-effect="st-effect-111" class="sb-btn2"><span><img src="/assets/image/link8.png" class="img-responsive"></span></button>
+                        
                         <button data-effect="st-effect-1" class="sb-btn1"><span><img src="/assets/image/menu4.png" class="img-responsive"></span></button>
                     </div>  
                 </div><!-- /main -->
-        
                 {{-- Navigation Bar --}}
-
                 <header class="navbar navbar-default hidden-xs hidden-sm">
                     <div class="container-fluid">                
                     <nav id="bs-navbar" class="collapse navbar-collapse">
@@ -110,7 +97,7 @@
                             <form action="/search" method="GET" role="search">
                                 <div class="input-group">
                                 <input type="text" class="form-control" name="q"
-                                    placeholder="Search" autocomplete="on">
+                                    placeholder="搜索" autocomplete="on">
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="submit">
                                         <span class="iconfont">&#xe674;</span>
@@ -122,11 +109,8 @@
                     </nav>
                     </div>
                 </header>   
-
                 @yield('content')
-
                 <a href="#0" class="cd-top">Top</a>
-
                 <div class="linkme">
                     <dl>
                         <dt>巴黎(广告):</dt>
@@ -147,9 +131,7 @@
                         <dt>关注旅法华人战报(公共微信号)：DailyFR</dt>
                     </dl>
                 </div>
-
                 <div id="gradline"></div>
-
                 <div class="module-footer">
                     <div class="module-footer-inner">
                         <div class="module-footer-content">
@@ -167,7 +149,6 @@
                 </div>
             @yield('scripts')
             </div><!-- /st-content-inner -->
-            
         </div><!-- /st-content -->
     </div><!-- /st-pusher -->
 </div><!-- /st-container --> 
@@ -176,6 +157,5 @@
 <script src="/assets/js/classie.js"></script>
 <script src="/assets/js/modernizr.custom.js"></script>
 <script src="/assets/js/sidebarEffects.js"></script>  
-
 </body>
 </html>
