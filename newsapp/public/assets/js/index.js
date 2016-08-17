@@ -76,3 +76,38 @@ jQuery(document).ready(function($){
         );
     });
 });
+
+$(function(){
+    $(".changelarge").click(function(event){
+        $("#article-text").css("font-size","20px");
+    });
+});
+
+$(function(){
+    $(".changemiddle").click(function(event){
+        $("#article-text").css("font-size","16px");
+    });
+});
+
+$(function(){
+    $(".changesmall").click(function(event){
+        $("#article-text").css("font-size","14px");
+    });
+});
+
+
+/*push*/
+$(document).ready(function(){
+    //To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+    //Vertical Sliding
+    //Caption Sliding (Partially Hidden to Visible)
+    $('.boxgrid.caption').hover(function(){
+        $(".cover", this).stop().animate({top:'120px'},{queue:false,duration:160});
+    }, function() {
+        $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+    });
+});
+
+
+
+/*duoshuo*/

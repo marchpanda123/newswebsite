@@ -46,6 +46,7 @@ class DatabaseSeeder extends Seeder
                 'user_id' => 2,
                 'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'is_carousel' => false,
+                'is_hotevens' => false,
                 'intro' => $faker->sentence($nbWords = 10, $variableNbWords = true),
                 'page_image' => $faker->imageUrl($width = 720, $height = 405),
                 'content' => $faker->text,

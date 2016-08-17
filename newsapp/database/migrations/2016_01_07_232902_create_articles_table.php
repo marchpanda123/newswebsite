@@ -18,6 +18,9 @@ class CreateArticlesTable extends Migration
             $table->string('title')->index();
             $table->text('intro');
             $table->boolean('is_carousel')->default(false);
+            $table->boolean('is_hotevens')->default(false);
+            $table->boolean('is_hotimgs')->default(false);
+            $table->integer('is_ranks')->default(0);
             $table->string('page_image');
             $table->text('content');
             $table->timestamp('published_at');

@@ -78,7 +78,12 @@ class UserController extends Controller
             ->published()
             ->orderBy('published_at', 'desc')
             ->paginate(10);
-        return view('front.category')->with('articles', $articles);
+        $latest_news = Article::select('id', 'title', 'intro', 'page_image','published_at')
+            ->where('is_checked', true)
+            ->published()
+            ->orderBy('published_at', 'desc')
+            ->take(4)->get();
+        return view('front.category')->with('articles', $articles)->with('latest_news',$latest_news);
     }
 
     /**
@@ -93,7 +98,36 @@ class UserController extends Controller
         if ($article->is_checked == false) {
             abort(404);
         }
-        return view('front.article')->with('article', $article);
+        $hotevens = Article::select('id', 'title', 'page_image')
+            ->where('is_checked', true)
+            ->where('is_hotevens', true)
+            ->published()
+            ->orderBy('updated_at','desc')
+            ->get();
+        $hotimgs = Article::select('id', 'title', 'page_image','intro')
+            ->where('is_checked', true)
+            ->where('is_hotimgs', true)
+            ->published()
+            ->orderBy('updated_at','desc')
+            ->get();  
+        $ranks = Article::select('id', 'title', 'is_ranks')
+            ->where('is_checked', true)
+            ->where('is_ranks','!=','0')
+            ->published()
+            ->orderBy('is_ranks','asc')
+            ->get();
+        $latest_news = Article::select('id', 'title', 'intro', 'page_image','published_at')
+            ->where('is_checked', true)
+            ->published()
+            ->orderBy('published_at', 'desc')
+            ->take(4)->get();
+        return view('front.article')
+              ->with('article', $article)
+              ->with('hotevens',$hotevens)
+              ->with('hotimgs',$hotimgs)
+              ->with('ranks',$ranks)
+              ->with('latest_news',$latest_news);
+
     }
 
     /**
@@ -106,6 +140,11 @@ class UserController extends Controller
     {
         $keyword = $requests->get('q');
         $results = null;
+        $latest_news = Article::select('id', 'title', 'intro', 'page_image','published_at')
+            ->where('is_checked', true)
+            ->published()
+            ->orderBy('published_at', 'desc')
+            ->take(4)->get();
         if (empty($keyword)) {
             return redirect('/');
         }
@@ -116,6 +155,6 @@ class UserController extends Controller
                 ->published()
                 ->paginate(10);
         }
-        return view('front.search')->with('articles', $results);
+        return view('front.search')->with('articles', $results)->with('latest_news',$latest_news);
     }
 }

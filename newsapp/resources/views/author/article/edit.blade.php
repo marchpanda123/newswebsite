@@ -43,7 +43,7 @@
 
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="title" autofocus id="title"
-                                                   value="{{$article->title}}">
+                                                   value="{{$article->title}}" maxlength="20">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -53,7 +53,7 @@
 
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="intro" id="intro"
-                                                   value="{{$article->intro}}">
+                                                   value="{{$article->intro}}" maxlength="40">
                                         </div>
                                     </div>
                                     <div class="form-group">

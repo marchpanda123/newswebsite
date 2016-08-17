@@ -20,6 +20,9 @@
                     <thead>
                     <tr>
                         <th>文章名</th>
+                        <th>快讯</th>
+                        <th>最热图文</th>
+                        <th>排名显示</th>
                         <th>轮播</th>
                         <th>发布时间</th>
                         <th>状态</th>
@@ -30,6 +33,21 @@
                     @foreach ($articles as $article)
                         <tr>
                             <td>{{ $article->title }}</td>
+                            <td>
+                                @if($article->is_hotevens)
+                                    是
+                                @endif
+                            </td>
+                            <td>
+                                @if($article->is_hotimgs)
+                                    是
+                                @endif
+                            </td>
+                            <td>
+                                @if($article->is_ranks)
+                                    {{$article->is_ranks}}
+                                @endif
+                            </td>
                             <td>
                                 @if($article->is_carousel)
                                     是
@@ -69,7 +87,7 @@
     <script>
         $(function () {
             $("#posts-table").DataTable({
-                order: [[2, "desc"]]
+                order: [[5, "desc"]]
             });
         });
     </script>

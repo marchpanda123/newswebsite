@@ -42,7 +42,51 @@
             </div>
         </div>
     </div>
+    
+
+
+
+    <div class="news-content visible-xs visible-sm">
+        <p>热门推荐</p>
+        <div class="row">
+            <div class="article-layout-flex">
+                    @foreach($latest_news as $latest_new)
+                        <div class="article-list col-xs-12 col-sm-6">
+                            <article class="article-item">
+                                <div class="article-image responsive-image">
+                                    <img src="{{$latest_new->page_image}}" alt="{{$latest_new->title}}"
+                                         class="img-responsive">
+                                </div>
+                                <div class="article-text">
+                                    <h3 class="article-title">{{$latest_new->title}}</h3>
+                                    <p class="article-intro">{{$latest_new->intro}}</p>
+                                    <span class="article-intro">{{$latest_new->published_at}}</span>
+                                </div>
+                                <a class="article-link" href="/article/{{$latest_new->id}}"></a>
+                            </article>
+                        </div>
+                    @endforeach
+            </div>
+        </div>
+    </div>
+
+<!-- push -->
+<div class="push-new hidden-xs hidden-sm">
+    <p class="push-text">热门推荐</p>
+    @foreach($latest_news as $latest_new)
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="boxgrid caption">
+            <a href="/article/{{$latest_new->id}}" target="_BLANK"><img src="{{$latest_new->page_image}}"/>
+            <div class="cover boxcaption">
+                <h3>{{$latest_new->title}}</h3>
+                <p>{{$latest_new->intro}}<br/></p>
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
 @endsection
+
 
 @section('pagination')
     <div>

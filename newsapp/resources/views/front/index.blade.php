@@ -20,9 +20,13 @@
                                     <img src="{{$carousel_news[$i]->page_image}}" alt="Carousel News"
                                          class="img-responsive">
                                 </div>
+                                
                                 <div class="carousel-caption">
-                                    {{$carousel_news[$i]->title}}
+                                    
+                                    <p>{{$carousel_news[$i]->title}}</p>
+                                    
                                 </div>
+                                
                                 <a class="article-link" href="/article/{{$carousel_news[$i]->id}}"></a>
                             </div>
                         @endfor
@@ -45,7 +49,7 @@
                                 <img src="{{$news->page_image}}" alt="{{$news->title}}" class="img-responsive">
                             </div>
                             <div class="latest-caption">
-                                <strong>{{$news->title}}</strong>
+                                <p>{{$news->title}}</p>
                             </div>
                             <div class="latest-intro visible-xs">
                                 {{$news->intro}}

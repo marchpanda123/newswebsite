@@ -1,7 +1,7 @@
 @extends('front.template')
 @section('content')
 <!-- nav -->
-<ul id="breadcrumbs-one">
+<ul id="breadcrumbs-one" style="display:none">
     <li><a href="/">主页</a></li>
     <!-- @foreach($article->tags as $tag)
     <li><a href="/subject/{{$tag->id}}">{{$tag->name}}</a></li>
@@ -11,7 +11,7 @@
 <!-- content -->
 <div class="news-content">
     <div class="row">
-        <article class="article-body col-sm-8">
+        <article class="article-body col-md-8">
             <h1>{{$article->title}}</h1>
             <div class="article-info">
                 <ul class="list-inline">
@@ -24,9 +24,16 @@
                 </ul>
                 <a href="#shareget" class="share-to"><img src="/assets/image/shareto.png" class="sharetoimg"><span>分享</span></a>
                 <p>{{$article->intro}}</p>
-                
+                <div class="textchangediv">
+                    <span>字体&nbsp&nbsp&nbsp&nbsp</span>
+                    <span class="changesmall">小号</span>
+                    <span>   |   </span>
+                    <span class="changemiddle">中号</span>
+                    <span>   |   </span>
+                    <span class="changelarge">大号</span>
+                </div>
             </div>
-            <div>
+            <div id="article-text">
                 {!! $article->content !!}
             </div>
             <!--MOB SHARE BEGIN-->
@@ -39,73 +46,89 @@
                 <li class="-mob-share-facebook"><img src="/assets/image/share-fb.png"></li>
                 <li class="-mob-share-twitter"><img src="/assets/image/share-twitter.png"></li>
             </ul>
+
+            <div class="push-new hidden-xs hidden-sm">
+                <p class="push-text" style="padding-left:0px">热门推荐</p>
+                @foreach($latest_news as $latest_new)
+                <div>
+                    <div class="boxgrid caption" style="margin-left:0px">
+                        <a href="/article/{{$latest_new->id}}" target="_BLANK"><img src="{{$latest_new->page_image}}"/></a>
+                        <div class="cover boxcaption">
+                            <h3>{{$latest_new->title}}</h3>
+                            <p>{{$latest_new->intro}}<br/></p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
             <!--MOB SHARE END-->
             <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=14dd4b3814132"></script>
+
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="" data-title="" data-url=""></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说最新评论 start -->
+    <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+    <!-- 多说最新评论 end -->
+    <!-- 多说热评文章 start -->
+    <div class="ds-top-threads" data-range="daily" data-num-items="5"></div>
+    <!-- 多说热评文章 end -->
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
         </article>
 
-
-        <div class="col-sm-4 article-right hidden-xs">
+<!-- rightside -->
+        <div class="col-sm-4 article-right hidden-xs hidden-sm">
             <div class="article-container">
                 <div class="article-popular">
-                    <a>最新热点></a>
+                    <p>热点快讯</p>
                     <ul class="article-list-content">
-                        <li class="article-list">
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg" class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
+                       @foreach($hotevens as $hoteven)
+                        <li class="article-list-right">
+                            <a href="/article/{{$hoteven->id}}"><img src="{{$hoteven->page_image}}" class="img-responsive article-img">
+                            <a class="article-content" href="/article/{{$hoteven->id}}">{{$hoteven->title}}</a>
                         </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg"class="img-responsive article-img" >
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg"class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg"class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg"class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg"class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.aererstein.fr/wp-content/uploads/2013/08/news.jpg" class="img-responsive article-img">
-                            <a class="article-content">这里加上最新热点的内容</a>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="article-popular-pic">
-                    <a>热点图片></a>
+                    <p>推荐图文</p>
                     <ul class="article-list-content">
-                        <li>
-                            <img src="http://www.mediaweek.com.au/content/uploads/2016/03/6277209256_198cdbea86_o.jpg" class="img-responsive article-pic-img">
-                            <a>最新热点图片内容</a>
-                        </li>
-                        <li>
-                            <img src="http://www.mediaweek.com.au/content/uploads/2016/03/6277209256_198cdbea86_o.jpg" class="img-responsive article-pic-img">
-                            <a>最新热点图片内容</a>
-                        </li>
+                    @foreach($hotimgs as $hotimg)
+                        <div class="article-box-style">
+                            <a href="/article/{{$hotimg->id}}"><img src="{{$hotimg->page_image}}" class="img-responsive article-pic-img">
+                            <div class="article-content-tw1">
+                                <a href="/article/{{$hotimg->id}}">{{$hotimg->title}}</a>
+                            </div>
+                            <div class="article-content-tw2">
+                                <a href="/article/{{$hotimg->id}}">{{$hotimg->intro}}</a>
+                            </div>
+                        </div>
+                    @endforeach
                     </ul>
                 </div>
                 <div class="article-popular-rank">
-                    <a>一周热点排行></a>
+                    <p>热门排行</p>
                     <div class="article-rank">
                     <ul class="article-rank-list">
-                        <li><span id="article-active">1</span><a>一周热点排行内容</a></li>
-                        <li><span id="article-active">2</span><a>一周热点排行内容</a></li>
-                        <li><span id="article-active">3</span><a>一周热点排行内容</a></li>
-                        <li><span>4</span><a>一周热点排行内容</a></li>
-                        <li><span>5</span><a>一周热点排行内容</a></li>
-                        <li><span>6</span><a>一周热点排行内容</a></li>
-                        <li><span>7</span><a>一周热点排行内容</a></li>
-                        <li><span>8</span><a>一周热点排行内容</a></li>
-                        <li><span>9</span><a>一周热点排行内容</a></li>
-                        <li><span>10</span><a>一周热点排行内容</a></li>
+                    @foreach($ranks as $rank)
+                        <li><span class="article-rank-list-num" @if($rank->is_ranks == '1'|| $rank->is_ranks == '2'|| $rank->is_ranks == '3')id="article-active" @endif>{{$rank->is_ranks}}</span><a  href="/article/{{$rank->id}}" class="article-rank-style">{{$rank->title}}</a></li>
+                    @endforeach
                     </ul>
                     </div>
                 </div>
@@ -113,4 +136,34 @@
         </div>
     </div>
 </div>
+<!-- mobile -->
+<div class="article-right visible-xs visible-sm">
+            <div class="article-container">
+                <div class="article-popular">
+                    <p>热点快讯<img src="/assets/image/nsp0.png" class="icon-rediankuaixun"></p>
+                    <ul class="article-list-content">
+                       @foreach($hotevens as $hoteven)
+                        <li class="article-list-right">
+                            <a href="/article/{{$hoteven->id}}"><img src="{{$hoteven->page_image}}" class="img-responsive article-img">
+                            <a class="article-content" href="/article/{{$hoteven->id}}">{{$hoteven->title}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="article-popular-rank">
+                    <p>热门排行<img src="/assets/image/nsp4.png" class="icon-rediankuaixun"></p>
+                    <div class="article-rank">
+                    <ul class="article-rank-list">
+                    @foreach($ranks as $rank)
+                        <li><span class="article-rank-list-num" @if($rank->is_ranks == '1'|| $rank->is_ranks == '2'|| $rank->is_ranks == '3')id="article-active" @endif>{{$rank->is_ranks}}</span><a  href="/article/{{$rank->id}}" class="article-rank-style">{{$rank->title}}</a></li>
+                    @endforeach
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
 @endsection

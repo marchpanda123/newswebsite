@@ -96,6 +96,55 @@
                                     </button>
                                 @endif
                             @endif
+                            @if($article->is_checked===1)
+                                @if($article->is_hotevens)
+                                    <button type="submit" class="btn btn-success"
+                                            name="hoteven" value="0">
+                                        取消快讯
+                                    </button>
+                                @else
+                                    <button type="submit" class="btn btn-success"
+                                            name="hoteven" value="1">
+                                        设置快讯
+                                    </button>
+                                @endif
+                            @endif
+                            @if($article->is_checked===1)
+                                @if($article->is_hotimgs)
+                                    <button type="submit" class="btn btn-primary"
+                                            name="hotimg" value="0">
+                                        取消最热图文
+                                    </button>
+                                @else
+                                    <button type="submit" class="btn btn-primary"
+                                            name="hotimg" value="1">
+                                        设置最热图文
+                                    </button>
+                                @endif
+                            @endif
+                            @if($article->is_checked===1)
+                                
+                                    <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        排名<span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu" style=" margin-left: 530px; z-index: 20;
+  margin-top:-54px ;min-width:400px; background-color:white; border:none;box-shadow:none;">
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-default" name="rank" value="1">1</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="2">2</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="3">3</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="4">4</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="5">5</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="6">6</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="7">7</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="8">8</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="9">9</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="10">10</button>
+                                            <button type="submit" class="btn btn-default" name="rank" value="0">取消</button>
+                                        </div>
+                                    </ul>
+                                
+                            @endif
                         </div>
                     </div>
                 </form>

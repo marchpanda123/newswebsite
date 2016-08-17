@@ -41,7 +41,7 @@
 
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="title" autofocus id="title"
-                                                   value="{{old('title')}}">
+                                                   value="{{old('title')}}" maxlength="20">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -51,7 +51,7 @@
 
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="intro" id="intro"
-                                                   value="{{old('intro')}}">
+                                                   value="{{old('intro')}}" maxlength="40">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -176,12 +176,10 @@
             $("#tags").selectize({
                 placeholder: "添加标签"
             });
-            /*alert( CKEDITOR.lang.languages.zh );*/ // 1
+            
         });
         CKEDITOR.replace('content');
-        /*CKEDITOR.replace( 'content', {
-            language: 'zh-cn'
-        } );*/
+        
         CKEDITOR.config.filebrowserImageUploadUrl = "{{route('author.upload',['_token' => csrf_token() ])}}";
         // add class img-responsive
         CKEDITOR.on('dialogDefinition', function (ev) {
