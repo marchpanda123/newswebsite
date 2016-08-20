@@ -123,6 +123,19 @@
                                 @endif
                             @endif
                             @if($article->is_checked===1)
+                                @if($article->is_topics)
+                                    <button type="submit" class="btn btn-primary"
+                                            name="topic" value="0">
+                                        取消专题
+                                    </button>
+                                @else
+                                    <button type="submit" class="btn btn-primary"
+                                            name="topic" value="1">
+                                        设置专题
+                                    </button>
+                                @endif
+                            @endif
+                            @if($article->is_checked===1)
                                 
                                     <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                         排名<span class="caret"></span>

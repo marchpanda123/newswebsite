@@ -23,7 +23,7 @@ class ArticleController extends Controller
     {
         return view('admin.article.index')
             ->withArticles(Article::where('is_draft', false)
-                ->select('id', 'user_id', 'title', 'intro', 'is_carousel', 'is_hotevens', 'is_hotimgs', 'is_ranks', 'published_at', 'is_checked')->get());
+                ->select('id', 'user_id', 'title', 'intro', 'is_carousel', 'is_hotevens', 'is_hotimgs', 'is_ranks', 'published_at', 'is_checked','is_topics')->get());
     }
 
     /**
@@ -73,6 +73,12 @@ class ArticleController extends Controller
             $article->is_hotimgs = true;
         } elseif ($request->hotimg == '0') {
             $article->is_hotimgs = false;
+        }
+
+        if ($request->topic == '1') {
+            $article->is_topics = true;
+        } elseif ($request->topic == '0') {
+            $article->is_topics = false;
         }
 
         if ($request->rank == '1') {

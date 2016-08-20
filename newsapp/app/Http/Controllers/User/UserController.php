@@ -33,16 +33,37 @@ class UserController extends Controller
         $tags = Tag::select('id', 'name')
             ->where('show_index', true)
             ->get();
+        $topics = Article::select('id', 'title', 'page_image','intro','is_topics')
+            ->where('is_checked', true)
+            ->where('is_topics', true)
+            ->published()
+            ->orderBy('updated_at','desc')
+            ->get();
+        $hotevens = Article::select('id', 'title', 'page_image')
+            ->where('is_checked', true)
+            ->where('is_hotevens', true)
+            ->published()
+            ->orderBy('updated_at','desc')
+            ->get();
         $index_articles = array();
         foreach ($tags as $tag) {
               $istag = $tag->id;
-              if($istag%2 == '0'){
+              if($istag == '2'||$istag == '4'||$istag == '8'||$istag == '10'){
                 $tag['articles'] = $tag->articles()
                 ->select('article_id', 'title', 'intro', 'page_image','published_at')
                 ->where('is_checked', true)
                 ->published()
                 ->orderBy('published_at', 'desc')
                 ->take(2)->get();
+              $index_articles[] = $tag;
+              }
+              else if($istag == '6'){
+                $tag['articles'] = $tag->articles()
+                ->select('article_id', 'title', 'intro', 'page_image','published_at')
+                ->where('is_checked', true)
+                ->published()
+                ->orderBy('published_at', 'desc')
+                ->take(6)->get();
               $index_articles[] = $tag;
               }
               else{
@@ -53,7 +74,6 @@ class UserController extends Controller
                 ->orderBy('published_at', 'desc')
                 ->take(1)->get();
               $index_articles[] = $tag;  
-              
               }
             
         }
@@ -61,7 +81,9 @@ class UserController extends Controller
             ->with('carousel_news', $carousel_news)
             ->with('latest_news', $latest_news)
             ->with('ads', $ads)
-            ->with('index_articles', $index_articles);
+            ->with('index_articles', $index_articles)
+            ->with('topics', $topics)
+            ->with('hotevens',$hotevens);
     }
 
     /**

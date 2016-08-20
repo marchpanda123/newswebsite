@@ -47,7 +47,7 @@
             <div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
                         <!-- Top Navigation -->
                 {{-- header nav --}}
-                <div class="hdNav hidden-xs hidden-sm">
+                <!-- <div class="hdNav hidden-xs hidden-sm">
                     <div class="hdNavbar">
                     <nav data-resizeable="true" class="hdNavLists" data-transform="byClass">
                         <a target="_blank" href="http://www.xineurope.com/">门户</a>
@@ -63,9 +63,9 @@
                     <div class="hdNavbtn">
                         <div class="bdNavbtnbar"><span class="bdNavbtntext">新欧洲</span></div>
                     </div>
-                </div>
+                </div> -->
                 {{-- logo Bar --}}
-                <div>
+                <!-- <div>
                     <div class="top-blank"></div>
                     <div class="top-text hidden-xs hidden-sm">
                         <p class="top-text-content"></p>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="top-middle"></div>
                     <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
-                </div>
+                </div> -->
                 {{--Siderbar--}}
                 <div class="main clearfix">
                     <div id="st-trigger-effects" class="column siderbarnav visible-xs visible-sm"> 
@@ -90,12 +90,13 @@
                 <header class="navbar navbar-default hidden-xs hidden-sm">
                     <div class="container-fluid">                
                     <nav id="bs-navbar" class="collapse navbar-collapse">
+                        <a href="/"><img src="/assets/image/hww.png" class="nav-logo-hww"></a>
                         <ul class="nav navbar-nav"> 
                             @include('front.nav')
                         </ul>
                         <div class="container">
                             <form action="/search" method="GET" role="search">
-                                <div class="input-group">
+                                <div class="input-group topsearchbar">
                                 <input type="text" class="form-control" name="q"
                                     placeholder="搜索" autocomplete="on">
                                 <span class="input-group-btn">
@@ -152,6 +153,8 @@
         </div><!-- /st-content -->
     </div><!-- /st-pusher -->
 </div><!-- /st-container --> 
+
+
 <script src="/assets/js/libraries.min.js"></script>
 <script src="/assets/js/index.js"></script>
 <script src="/assets/js/classie.js"></script>
