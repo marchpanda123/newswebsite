@@ -1,9 +1,31 @@
 @extends('front.template')
 @section('content')
     <div class="news-content">
-        <div style="background:#e7e8e1;padding-top:30px;padding-bottom:20px;"><img src="/assets/image/logo1.png" style="display:inline-block;padding-left:87px;"><img src="/assets/image/logo2.png" id="logo2" style="display:inline-block;"></div>
+        <!--xineuropecontent-->
+        <nav class="cd-stretchy-nav">
+            <a class="cd-nav-trigger" href="#0">
+                <span aria-hidden="true"></span>
+            </a>
+
+            <ul>
+                <li><a href="#0" class="active"><span>门户<img src="/assets/image/link.png" class="img-responsive" style="display:inline-block;"></span></a></li>
+                <li><a href="#0"><span>新闻</span></a></li>
+                <li><a href="#0"><span>战法</span></a></li>
+                <li><a href="#0"><span>跳蚤</span></a></li>
+                <li><a href="#0"><span>留学</span></a></li>
+                <li><a href="#0"><span>黄页</span></a></li>
+                <li><a href="#0"><span>寻味</span></a></li>
+                <li><a href="#0"><span>全顺</span></a></li>
+                <li><a href="#0"><span>游游</span></a></li>
+                <li><a href="#0"><span>欧团</span></a></li>
+            </ul>
+
+            <span aria-hidden="true" class="stretchy-nav-bg"></span>
+        </nav>
+
         <div class="module-highlight">
             <div class="row highlight-row">
+                <div style="background:#e7e8e1;padding-top:30px;padding-bottom:20px;"><img src="/assets/image/logo1.png" style="display:inline-block;"><img src="/assets/image/logo2.png" id="logo2" style="display:inline-block;"></div>
                 <div id="carousel-news-generic" class="carousel slide col-sm-12 col-md-6" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">

@@ -3322,7 +3322,7 @@ tbody.collapse.in {
   height:30px;
   width:110px;
   margin-top:10px;
-  margin-left:59px;
+/*   margin-left:4%; */
 }
 
 @media screen and (min-width: 991px) and (max-width: 1240px){
@@ -3353,7 +3353,7 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn {
-  width: 12%;
+  width: 9%;
   white-space: nowrap;
   vertical-align: middle;
 }
@@ -7015,3 +7015,10 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
 .module-fashion-tag:hover{
   color: #8b8b8b;
 }
+
+/*add*/
+.navbar-row{
+  max-width: 1280px;
+  margin:0 auto;
+}
+

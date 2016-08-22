@@ -8,6 +8,7 @@
     <link href="/assets/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/xineurope.css">
     @yield('styles')
 </head>
 <body>
@@ -88,7 +89,7 @@
                 </div><!-- /main -->
                 {{-- Navigation Bar --}}
                 <header class="navbar navbar-default hidden-xs hidden-sm">
-                    <div class="container-fluid">                
+                    <div class="navbar-row">                
                     <nav id="bs-navbar" class="collapse navbar-collapse">
                         <a href="/"><img src="/assets/image/hww.png" class="nav-logo-hww"></a>
                         <ul class="nav navbar-nav"> 
@@ -160,6 +161,7 @@
 <script src="/assets/js/classie.js"></script>
 <script src="/assets/js/modernizr.custom.js"></script>
 <script src="/assets/js/sidebarEffects.js"></script>
+
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"xineurope"};
