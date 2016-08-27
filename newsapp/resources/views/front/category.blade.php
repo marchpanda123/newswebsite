@@ -2,6 +2,7 @@
 @section('content')
     <div class="news-content">
         <div class="row">
+            <p class="push-text" style="font-size:24px;font-weight:bold;color:#5175C0;padding-bottom:6px;">{{$tagcurr->name}}<img src="/assets/image/arrows.png" style="display:inline-block;padding-left:5px;"></p>
             <div class="article-layout-flex">
                 @if(count($articles)!=null)
                     @foreach($articles as $article)
@@ -43,9 +44,6 @@
         </div>
     </div>
     
-
-
-
     <div class="news-content visible-xs visible-sm">
         <p>热门推荐</p>
         <div class="row">
@@ -70,23 +68,31 @@
         </div>
     </div>
 
-<!-- push -->
-<div class="push-new hidden-xs hidden-sm">
-    <p class="push-text">热门推荐</p>
-    @foreach($latest_news as $latest_new)
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="boxgrid caption">
-            <a href="/article/{{$latest_new->id}}" target="_BLANK"><img src="{{$latest_new->page_image}}"/>
-            <div class="cover boxcaption">
-                <h3>{{$latest_new->title}}</h3>
-                <p>{{$latest_new->intro}}<br/></p>
-            </div>
-        </div>
-    </div>
-    @endforeach
-</div>
-@endsection
 
+<!-- push -->
+
+    <div class="push-new hidden-xs hidden-sm">
+        <div class="row"><p class="push-text" style="border-bottom:1px solid #dcdcdc;font-size:24px;font-weight:bold;color:black;padding-bottom:6px;">更多推荐<img src="/assets/image/cursor.png" style="display:inline-block;padding-left:5px;"></p></div>
+        @for($j=0;$j<'4';$j++)
+        @if($tagcurr->id != $numbers[$j]+2)
+            <div class="row">
+                <p class="push-text" style="color:black;">{{$index_articles[$numbers[$j]]->name}}<span style="color:red;"> > </span></p>
+                @foreach($index_articles[$numbers[$j]]->articles as $article)
+                <div class="col-xs-12 col-sm-6 col-md-4 col-diy">
+                    <div class="boxgrid caption">
+                        <a href="/article/{{$article->article_id}}" target="_BLANK"><img src="{{$article->page_image}}"/></a>
+                        <div class="cover boxcaption">
+                            <h3>{{$article->title}}</h3>
+                            <p>{{$article->intro}}<br/></p>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        @endif
+        @endfor
+    </div>
+@endsection
 
 @section('pagination')
     <div>

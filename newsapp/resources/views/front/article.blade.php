@@ -48,7 +48,7 @@
             </ul>
 
             <div class="push-new hidden-xs hidden-sm">
-                <p class="push-text" style="padding-left:0px">热门推荐</p>
+                <p class="push-text" style="border-bottom:1px solid #dcdcdc;font-size:24px;font-weight:bold;color:black;padding-bottom:6px;">更多推荐<img src="/assets/image/cursor.png" style="display:inline-block;padding-left:5px;"></p>
                 @foreach($latest_news as $latest_new)
                 <div>
                     <div class="boxgrid caption" style="margin-left:0px">

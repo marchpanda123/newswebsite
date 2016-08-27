@@ -111,12 +111,12 @@
                             @endif
                             @if($article->is_checked===1)
                                 @if($article->is_hotimgs)
-                                    <button type="submit" class="btn btn-primary"
+                                    <button type="submit" class="btn btn-info"
                                             name="hotimg" value="0">
                                         取消最热图文
                                     </button>
                                 @else
-                                    <button type="submit" class="btn btn-primary"
+                                    <button type="submit" class="btn btn-info"
                                             name="hotimg" value="1">
                                         设置最热图文
                                     </button>
@@ -136,11 +136,24 @@
                                 @endif
                             @endif
                             @if($article->is_checked===1)
+                                @if($article->is_columns)
+                                    <button type="submit" class="btn btn-success"
+                                            name="column" value="0" style="margin-top:10px;">
+                                        取消专栏
+                                    </button>
+                                @else
+                                    <button type="submit" class="btn btn-success"
+                                            name="column" value="1" style="margin-top:10px;">
+                                        设置专栏
+                                    </button>
+                                @endif
+                            @endif
+                            @if($article->is_checked===1)
                                 
-                                    <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    <button type="submit" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="margin-top:10px;">
                                         排名<span class="caret"></span>
                                     </button>
-                                    <ul class="dropdown-menu" role="menu" style=" margin-left: 530px; z-index: 20;
+                                    <ul class="dropdown-menu" role="menu" style=" margin-left: 147px; z-index: 20;
   margin-top:-54px ;min-width:400px; background-color:white; border:none;box-shadow:none;">
                                         <div class="btn-group">
                                             <button type="submit" class="btn btn-default" name="rank" value="1">1</button>

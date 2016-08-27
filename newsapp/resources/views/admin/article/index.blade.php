@@ -20,6 +20,7 @@
                     <thead>
                     <tr>
                         <th>文章名</th>
+                        <th>专栏</th>
                         <th>专题</th>
                         <th>快讯</th>
                         <th>最热图文</th>
@@ -34,6 +35,11 @@
                     @foreach ($articles as $article)
                         <tr>
                             <td>{{ $article->title }}</td>
+                            <td>
+                                @if($article->is_columns)
+                                    是
+                                @endif
+                            </td>
                             <td>
                                 @if($article->is_topics)
                                     是
@@ -93,7 +99,7 @@
     <script>
         $(function () {
             $("#posts-table").DataTable({
-                order: [[6, "desc"]]
+                order: [[7, "desc"]]
             });
         });
     </script>

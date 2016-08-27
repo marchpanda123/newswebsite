@@ -1,8 +1,22 @@
-@foreach($tags as $tag)
-    <li @if (Request::is("subject/$tag->id")) class="active" @endif class="hidden-xs hidden-sm">
-        <a href="/subject/{{$tag->id}}" class="nav-font">{{$tag->name}}</a>
+@for($i = 0 ; $i < 8 ; $i ++)
+    <li @if (Request::is("subject/$tags[$i]->id")) class="active" @endif class="hidden-xs hidden-sm">
+        <a href="/subject/{{$tags[$i]->id}}" class="nav-font">{{$tags[$i]->name}}</a>
     </li>
-@endforeach
+@endfor
+    <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            更多
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            @for($i = 8 ; $i < count($tags) ; $i ++)
+			    <li @if (Request::is("subject/$tags[$i]->id")) class="active" @endif class="hidden-xs hidden-sm">
+			        <a href="/subject/{{$tags[$i]->id}}" class="nav-font">{{$tags[$i]->name}}</a>
+			    </li>
+			@endfor
+        </ul>
+    </li> 
+
 
 @for( $i = 0; $i < count($tags); $i++)
     <li class="visible-xs visible-sm">

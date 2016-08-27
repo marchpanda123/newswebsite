@@ -17,6 +17,7 @@ class CreateArticlesTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('title')->index();
             $table->text('intro');
+            $table->boolean('is_columns')->default(false);
             $table->boolean('is_topics')->default(false);
             $table->boolean('is_carousel')->default(false);
             $table->boolean('is_hotevens')->default(false);

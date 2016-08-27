@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        for ($i = 1; $i <= 10; $i++) {
+        for ($i = 1; $i <= 13; $i++) {
             Tag::create([
                 'name' => 'Topic' . $i,
                 'show_index' => $i != 1 ? true : false,

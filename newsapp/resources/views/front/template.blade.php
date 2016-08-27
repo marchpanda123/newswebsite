@@ -66,8 +66,8 @@
                     </div>
                 </div> -->
                 {{-- logo Bar --}}
-                <!-- <div>
-                    <div class="top-blank"></div>
+                <div class="visible-xs visible-sm">
+                    <!-- <div class="top-blank"></div>
                     <div class="top-text hidden-xs hidden-sm">
                         <p class="top-text-content"></p>
                         <span class="top-line"></span>
@@ -77,9 +77,9 @@
                             <img src="/assets/image/qrcode.jpg" class="img-responsive top-qrcode-img">
                         </div>
                     </div>
-                    <div class="top-middle"></div>
+                    <div class="top-middle"></div> -->
                     <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
-                </div> -->
+                </div> 
                 {{--Siderbar--}}
                 <div class="main clearfix">
                     <div id="st-trigger-effects" class="column siderbarnav visible-xs visible-sm"> 
@@ -108,6 +108,25 @@
                                 </div>
                             </form>
                         </div>
+                    </nav>
+                    <!-- xineurope nav -->
+                    <nav class="cd-stretchy-nav hidden-xs hidden-sm">
+                        <a class="cd-nav-trigger" href="#0">
+                            <span aria-hidden="true"></span>
+                        </a>
+                        <ul>
+                            <li><a href="http://www.xineurope.com" class="active" target="_blank"><span>门户</span></a></li>
+                            <li><a href="http://zhanbao.xineurope.com" target="_blank"><span>新闻</span></a></li>
+                            <li><a href="http://bbs.xineurope.com" target="_blank"><span>战法</span></a></li>
+                            <li><a href="http://buy.xineurope.com" target="_blank"><span>跳蚤</span></a></li>
+                            <li><a href="http://study.xineurope.com" target="_blank"><span>留学</span></a></li>
+                            <li><a href="http://live.xineurope.com" target="_blank"><span>黄页</span></a></li>
+                            <li><a href="http://www.newsavour.com" target="_blank"><span>寻味</span></a></li>
+                            <li><a href="http://www.topshun.com/" target="_blank"><span>全顺</span></a></li>
+                            <li><a href="http://www.yoyoer.com" target="_blank"><span>游游</span></a></li>
+                            <li><a href="http://www.ouituan.com" target="_blank"><span>欧团</span></a></li>
+                        </ul>
+                        <span aria-hidden="true" class="stretchy-nav-bg"></span>
                     </nav>
                     </div>
                 </header>   

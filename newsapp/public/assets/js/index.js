@@ -104,7 +104,7 @@ $(document).ready(function(){
     $('.boxgrid.caption').hover(function(){
         $(".cover", this).stop().animate({top:'120px'},{queue:false,duration:160});
     }, function() {
-        $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+        $(".cover", this).stop().animate({top:'159px'},{queue:false,duration:160});
     });
 });
 

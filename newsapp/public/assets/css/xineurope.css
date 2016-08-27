@@ -109,6 +109,7 @@
   position: relative;
   z-index: 2;
   padding: 60px 0 0;
+  margin-right: -65px;
   visibility: hidden;
   -webkit-transition: visibility 0.3s;
   -moz-transition: visibility 0.3s;
@@ -127,6 +128,7 @@
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
+  text-decoration: none;
 }
 .cd-stretchy-nav ul a::after {
   /* navigation item icons */
@@ -275,6 +277,36 @@
   -webkit-animation-delay: 0.25s;
   -moz-animation-delay: 0.25s;
   animation-delay: 0.25s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(6) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(6) span {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(7) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(7) span {
+  -webkit-animation-delay: 0.35s;
+  -moz-animation-delay: 0.35s;
+  animation-delay: 0.35s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(8) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(8) span {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(9) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(9) span {
+  -webkit-animation-delay: 0.45s;
+  -moz-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+}
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(10) a::after,
+.cd-stretchy-nav.nav-is-visible ul li:nth-of-type(10) span {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 

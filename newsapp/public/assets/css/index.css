@@ -3275,22 +3275,23 @@ tbody.collapse.in {
 
 }
 @media (min-width: 911px){
-.input-group {
+/* .input-group {
   position: relative;
   display: table;
   border-collapse: separate;
   padding-top: 8px;
-/*   left: 30px; */
-  }
+left: 30px;
+  } */
 }
 @media screen and (min-width: 911px) and (max-width: 991px){
-.input-group {
+/* .input-group {
   position: relative;
   display: table;
+  7
   border-collapse: separate;
   padding-top: 8px;
   left: 0;
-  }
+  } */
 }
 
 
@@ -3330,7 +3331,7 @@ tbody.collapse.in {
   position: relative;
   z-index: 2;
   float: right;
-  width: 80px;
+  width: 160px;
   margin-bottom: 0;
   }
 }
@@ -3353,11 +3354,11 @@ tbody.collapse.in {
 
 .input-group-addon,
 .input-group-btn {
-  width: 9%;
+/*   width: 9%; */
   white-space: nowrap;
   vertical-align: middle;
 }
-@media screen and (min-width: 991px) and (max-width: 1240px){
+@media screen and (min-width: 991px){
 .input-group-addon,
 .input-group-btn {
   width: 1%;
@@ -3373,9 +3374,7 @@ tbody.collapse.in {
 }
 }
 @media screen and (min-width: 991px) and (max-width: 1100px){
-.topsearchbar{
-  display: none;
-}
+
 
 }
 .input-group-addon {
@@ -5622,21 +5621,22 @@ button.close {
   display: inline-block;
 }
 
-.module-title .module-title-link{
+/* .module-title .module-title-link{
   color: #337ab7;
+} */
+.module-title .module-title-link{
+  color: rgb(74,74,74);
+  font-weight: bold;
 }
-
 .module-title .module-title-link:hover {
-  color: #54535A;
+  color: black;
   text-decoration: none;
 }
 .module_line{
-    color: #337ab7;
-    
+    color: rgb(74,74,74);
     display: inline-block;
 }
 .module_title{
-    
     display: inline-block;
 }
 
@@ -5680,7 +5680,16 @@ button.close {
   padding-left: 10px;
   display: inline-block;
 }
-
+._tag-zl{
+  border-left: 4px solid dodgerblue;
+  padding-left: 10px;
+  display: inline-block;
+}
+._tag-last{
+  border-left: 4px solid navy;
+  padding-left: 10px;
+  display: inline-block;
+}
 
 /*fenge*/
 @media (max-width: 992px) {
@@ -6574,7 +6583,9 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
 .share-mob ul{
   display: inline-block;
 } */
-
+.-mob-share-list{
+  display: inline-block;
+}
 .-mob-share-list li{
   float: left;
 }
@@ -6667,12 +6678,12 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
 
 /*push content*/
 .push-new{
- padding-top: 50px;
- padding-bottom: 220px;
+ padding-top: 10px;
+ padding-bottom: 20px;
 }
 .push-text{
   font-size: 20px;
-  padding-left: 10px;
+/*   padding-left: 10px; */
   color: #006699;
 }
 
@@ -6713,7 +6724,7 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
 }
 .boxcaption h3{
   font-size: 14Px;
-  margin: 10px 10px 10px 10px; color:#FFF; letter-spacing:-1px; font-weight: bold; 
+  margin: 10px 10px 16px 10px; color:#FFF; letter-spacing:-1px; font-weight: bold; 
 }
 .boxcaption a{
   color:#C8DCE5;
@@ -6751,6 +6762,18 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   margin-top: 10px;
   cursor: pointer;
   font-size: 30px;
+  color: rgb(74,74,74);
+  font-weight: bold;
+}
+.module-social-heading-zl{
+  margin-top: 10px;
+  font-size: 30px;
+  color: rgb(74,74,74);
+  font-weight: bold;
+}
+.module-social-heading:hover {
+  color: black;
+  text-decoration: none;
 }
 .module-social-layout{
   
@@ -6882,6 +6905,10 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   padding-top: 53px;
   padding-left: 10px;
 }
+.module-most-popular-zl{
+  padding-top: 11px;
+  padding-left: 10px;
+}
 .top-list-heading{
   margin:0;
   padding:12px;
@@ -6889,6 +6916,14 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   color: #fff;
   background:#6C9DEC;
 }
+.top-list-heading-zl{
+  margin:0;
+  padding:12px;
+  font-size: 24px;
+  color: #fff;
+  background:rgb(233,24,2);
+}
+
 .top-list_list{
   padding: 0;
   margin: 0;
@@ -6909,9 +6944,27 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   flex: 1 1 100%;
   padding: 0.5em 0;
 }
+.top-list-item-zl{
+
+  background:#2f2f2f;
+  width: 100%;
+  height: 100px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  padding: 0.5em 0;
+}
 .top-list-link{
   line-height: 60px;
   padding: 5px 5px;
+  color:#d3d3d3;
+}
+.top-list-link-zl{
+  line-height: 60px;
+  padding: 15px 10px;
   color:#d3d3d3;
 }
 .top-list-bullet{
@@ -6934,11 +6987,26 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   width: 270px;
   word-wrap:break-word;
   word-break:break-all;
-  margin-top: 20px;
+  margin-top: 7px;
   color: floralwhite;
   opacity: 0.9;
 }
+.top-list-headline-zl{
+  padding-left: 5px;
+  padding-top: 6Px;
+  width: 270px;
+  word-wrap:break-word;
+  word-break:break-all;
+  margin-top: 10px;
+  color: floralwhite;
+  opacity: 0.9;
+  font-size: 18px;
+}
 .top-list-headline:hover{
+  color: white;
+  opacity: 1;
+}
+.top-list-headline-zl:hover{
   color: white;
   opacity: 1;
 }
@@ -6983,6 +7051,11 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer;
+  color: rgb(74,74,74);
+  font-weight: bold;
+}
+.module-fashion-heading:hover{
+  color:black;
 }
 .module-fashion-img:hover{
   cursor:pointer;
@@ -7020,5 +7093,9 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
 .navbar-row{
   max-width: 1280px;
   margin:0 auto;
+}
+
+.col-diy{
+  width:27.333333%;
 }
 
