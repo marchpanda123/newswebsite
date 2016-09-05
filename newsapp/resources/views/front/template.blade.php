@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{config('news.title')}}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/image/favicon.ico" media="screen" />
     <link href="/assets/css/index.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/assets/css/component.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
@@ -66,7 +67,7 @@
                     </div>
                 </div> -->
                 {{-- logo Bar --}}
-                <div class="visible-xs visible-sm">
+                
                     <!-- <div class="top-blank"></div>
                     <div class="top-text hidden-xs hidden-sm">
                         <p class="top-text-content"></p>
@@ -78,6 +79,7 @@
                         </div>
                     </div>
                     <div class="top-middle"></div> -->
+                <div class="visible-xs visible-sm">
                     <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
                 </div> 
                 {{--Siderbar--}}
@@ -132,7 +134,9 @@
                 </header>   
                 @yield('content')
                 <a href="#0" class="cd-top">Top</a>
-                <div class="linkme">
+
+
+                <div class="linkme visible-xs visible-sm">
                     <dl>
                         <dt>巴黎(广告):</dt>
                         <dd>0033 (0)1 46 78 00 16</dd>
@@ -152,8 +156,8 @@
                         <dt>关注旅法华人战报(公共微信号)：DailyFR</dt>
                     </dl>
                 </div>
-                <div id="gradline"></div>
-                <div class="module-footer">
+                <div id="gradline" class="visible-xs visible-sm"></div>
+                <div class="module-footer visible-xs visible-sm">
                     <div class="module-footer-inner">
                         <div class="module-footer-content">
                             <p class="module-footer-text">
@@ -168,6 +172,73 @@
                         </div>
                     </div>
                 </div>
+
+
+                <footer class="hidden-xs hidden-sm">
+                    <div class="footer-main">
+                        <div class="row footer-container">
+                            <div class="col-lg-4 col-md-4">
+                                <div><p class="footer-text">关于我们</p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/company/" target="_black" id="footer-about" >易能传媒</a></p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/about/service.php" target="_black" id="footer-about">服务条款</a></p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/company/contact.php" target="_black" id="footer-about">联系我们</a></p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/advertise/" target="_black" id="footer-about">广告服务</a></p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/company/copyme.php" target="_black" id="footer-about">复制新欧洲</a></p></div>
+                                <div><p class="footer-topic"><a href="http://corp.xineurope.com/webapp/index.php" target="_black" id="footer-about">移动应用</a></p></div>
+                                <div><p class="footer-topic"><a href="http://www.ouituan.com/" target="_black" id="footer-about">欧团网</a></p></div>
+                                <div><p class="footer-topic"><a href="http://www.yoyoer.com/" target="_black" id="footer-about">游游旅行</a></p></div>
+                                <div><p class="footer-topic"><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&entyId=20120323105522451" target="_black" id="footer-about">营业许可</a></p></div>
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div><p class="footer-text">联系方式</p></div>
+                                <div><p class="footer-topic">巴黎(广告)</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/telephone.png" class="footer-img-icon">0033 (0)1 46 78 00 16</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/envelope.png" class="footer-img-icon">pub@xineurope.com</p></div>
+                                <div><p class="footer-topic">上海(广告)</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/telephone.png" class="footer-img-icon">0086 (0)21 60 43 88 86#802</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/envelope.png" class="footer-img-icon">ads-shanghai@xineurope.com</p></div>
+                                <div><p class="footer-topic">投诉</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/telephone.png" class="footer-img-icon">0033 (0)1 46 78 00 16 转运营部</p></div>
+                                <div><p class="footer-topic"><img src="/assets/image/envelope.png" class="footer-img-icon">tousu@xineurope.com</p></div>
+
+                            </div>
+                            <div class="col-lg-4 col-md-4">
+                                <div><p class="footer-text">合作企业</p></div>
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                                <img src="/assets/image/c1.jpg" class="footer-img">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-lgmd-4"><p class="footer-text">关注旅法华人战报</p><img class="footer-img-code" src="/assets/image/qrcode.jpg"></div>
+
+                            <div class="col-lg-4 col-md-4"></div>
+                            <div class="col-lg-4 col-md-4"></div>
+                        </div>
+                        <div class="row">
+                            <hr class="footer-line">
+                        </div>
+
+                        <div class="row footer-right">海外网版权所有，未经书面授权禁止使用</div>
+                        <div class="row footer-right">Copyright © 2015 by news.xineurope.com all rights reserved</div>
+                    </div>
+                </footer>
+
+
             @yield('scripts')
             </div><!-- /st-content-inner -->
         </div><!-- /st-content -->
@@ -180,8 +251,24 @@
 <script src="/assets/js/classie.js"></script>
 <script src="/assets/js/modernizr.custom.js"></script>
 <script src="/assets/js/sidebarEffects.js"></script>
-
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+
+<!-- <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.thinkpage.cn/widget/chameleon.js"))</script>
+<script>tpwidget('init', {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "bottom-left",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UF2B28B54A",
+    "hash": "f05efa31ce54d95135c115083530fd73"
+});
+tpwidget('show');</script> -->
+
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"xineurope"};
     (function() {

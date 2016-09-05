@@ -51,7 +51,7 @@
 
                                         <div class="col-md-10">
                                             <input type="text" class="form-control" name="intro" id="intro"
-                                                   value="{{old('intro')}}" maxlength="40">
+                                                   value="{{old('intro')}}" maxlength="30">
                                         </div>
                                     </div>
                                     <div class="form-group">

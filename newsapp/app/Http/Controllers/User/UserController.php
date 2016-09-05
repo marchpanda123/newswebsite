@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Ad;
 use App\Article;
 use App\Tag;
+use App\Video;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -61,6 +62,9 @@ class UserController extends Controller
             ->orderBy('updated_at','desc')
             ->take(8)
             ->get();
+        $videos = Video::select('url', 'name')
+            ->orderBy('created_at', 'desc')
+            ->take(1)->get();
         $index_articles = array();
         foreach ($tags as $tag) {
               $istag = $tag->id;
@@ -101,7 +105,8 @@ class UserController extends Controller
             ->with('topics', $topics)
             ->with('hotevens',$hotevens)
             ->with('columns',$columns)
-            ->with('hotimgs',$hotimgs);
+            ->with('hotimgs',$hotimgs)
+            ->with('videos',$videos);
     }
 
     /**

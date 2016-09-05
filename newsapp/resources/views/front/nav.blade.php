@@ -3,7 +3,7 @@
         <a href="/subject/{{$tags[$i]->id}}" class="nav-font">{{$tags[$i]->name}}</a>
     </li>
 @endfor
-    <li class="dropdown">
+    <li class="dropdown hidden-xs hidden-sm">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
             更多
             <b class="caret"></b>

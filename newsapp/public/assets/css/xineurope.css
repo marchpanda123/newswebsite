@@ -117,18 +117,20 @@
   text-align: right;
 }
 .cd-stretchy-nav ul a {
-  font-weight: bold;
   position: relative;
   display: block;
   height: 50px;
   line-height: 50px;
   padding: 0 calc(1em + 60px) 0 1em;
-  color: orange;
+  color: #fff;
   font-size: 1.8rem;
-  -webkit-transition: color 0.2s;
-  -moz-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
   text-decoration: none;
+}
+.cd-stretchy-nav ul a:hover{
+  color:orange;
 }
 .cd-stretchy-nav ul a::after {
   /* navigation item icons */
@@ -206,7 +208,10 @@
   transition: opacity 0.2s;
 }
 .cd-stretchy-nav.nav-is-visible ul a.active {
-  color: orange;
+  color: #fff;
+}
+.cd-stretchy-nav.nav-is-visible ul a.active:hover{
+  color:orange;
 }
 .cd-stretchy-nav.nav-is-visible ul a.active::after {
   opacity: 1;

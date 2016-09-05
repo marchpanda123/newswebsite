@@ -177,10 +177,19 @@
                             @endif
                         </div>
                     </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8">
+                            <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=UF2B28B54A&cid=CHBJ000000&l=zh-CHS&p=SMART&a=0&u=C&s=31&m=2&x=1&d=5&fc=C6C6C6&bgc=&bc=&ti=0&in=0&li=" frameborder="0" scrolling="no" width="660" height="90" allowTransparency="true"></iframe>
+                        </div>
 
-                    <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=UF2B28B54A&cid=PAR|%E5%B7%B4%E9%BB%8E&l=zh-CHS&p=SMART&a=0&u=C&s=31&m=2&x=1&d=5&fc=C6C6C6&bgc=&bc=&ti=0&in=0&li=" frameborder="0" scrolling="no" width="660" height="90" allowTransparency="true"></iframe>
+                        <div class="col-lg-6 col-md-4">
+                            <div class="dsg-container">
+                                <a href="http://www.amb-chine.fr/chn/" target="_blank"><img src="/assets/image/dsg.png" class="dsg-logo"></a>
+                            </div>
+                        </div>
 
-                    <!-- <iframe src="http://www.thinkpage.cn/weather/weather.aspx?uid=UF2B28B54A&cid=CHBJ000000&l=zh-CHS&p=SMART&a=1&u=C&s=4&m=2&x=1&d=5&fc=&bgc=&bc=&ti=0&in=0&li=" frameborder="0" scrolling="no" width="1000" height="27" allowTransparency="true"></iframe> -->
+                    </div>
                 </div>
                 @endif
             
@@ -230,11 +239,12 @@
                                 
                                 <div class="module-most-popular">
                                     <div class="module-top-list">
-                                        <h2 class="top-list-heading">最新资讯</h2>
+                                        <!-- <h2 class="top-list-heading">最新资讯</h2> -->
                                         <ul class="top-list_list">
                                         @foreach($hotevens as $hoteven)
                                             <li class="top-list-item">
                                                 <a class="top-list-link" href="/article/{{$hoteven->id}}"><img src="{{$hoteven->page_image}}" class="img-responsive article-img">
+                                                <img src="/assets/image/hot.gif" class="hot-text">
                                                 <a class="top-list-headline" style="text-decoration:none" href="/article/{{$hoteven->id}}">{{$hoteven->title}}</a>
                                             </li>
                                         @endforeach
@@ -269,6 +279,7 @@
                     <div class="col-xs-12 col-sm-6 module-ad @if($i++==1) hidden-xs @endif">
                         <img src="{{$ad->image_path}}" alt="{{$ad->name}}" class="img-responsive ad-image">
                         <a class="article-link" href="http://{{$ad->url}}"></a>
+                        <img src="/assets/image/adtext.jpg" class="ad-text">
                     </div>
                 @endforeach
             </div>
@@ -405,7 +416,7 @@
                                 
                                 <div class="module-most-popular-zl">
                                     <div class="module-top-list">
-                                        <h2 class="top-list-heading-zl">专栏</h2>
+                                        <!-- <h2 class="top-list-heading-zl">专栏</h2> -->
                                         <ul class="top-list_list">
                                         @for ($j = 0; $j < count($columns); $j++)
                                             <li class="top-list-item-zl" @if($j%2==0) style="background:#363636;"  @endif>
@@ -439,10 +450,11 @@
 
                             <div class="col-sm-8 module-social-layout">
 
-                                
                                 <div class="responsive-image img-op hidden-xs module-social-resposive">
                                     <div style="margin:10px">
-                                        <iframe frameborder="0" width="800" height="450" src="http://v.qq.com/iframe/player.html?vid=b0021tdo5w0&tiny=0&auto=0" allowfullscreen></iframe>
+                                        @foreach($videos as $video)
+                                        <iframe frameborder="0" width="800" height="450" src="{{$video->url}}" allowfullscreen></iframe>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <h2 class="module-fashion-headingbox">

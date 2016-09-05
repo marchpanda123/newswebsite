@@ -2443,7 +2443,6 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #5175C0;
 /*   background-color: #6ca1dd; */
-
 }
 
 .btn-primary:focus,
@@ -5627,6 +5626,8 @@ button.close {
 .module-title .module-title-link{
   color: rgb(74,74,74);
   font-weight: bold;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s; 
 }
 .module-title .module-title-link:hover {
   color: black;
@@ -6211,11 +6212,12 @@ ul{
   width: 100%;
   height: 50px;
   /* background: #14A1F6; */
-  background: #6ca1dd;
+  /* background: #6ca1dd; */
+  background:#5175C0;
 }
 
 .sb-btn1{
-  background: #6ca1dd;
+  background: #5175C0;
   height: 50px;
   float: left;
   border: none;
@@ -6764,6 +6766,8 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   font-size: 30px;
   color: rgb(74,74,74);
   font-weight: bold;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
 }
 .module-social-heading-zl{
   margin-top: 10px;
@@ -7053,6 +7057,8 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   cursor: pointer;
   color: rgb(74,74,74);
   font-weight: bold;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
 }
 .module-fashion-heading:hover{
   color:black;
@@ -7099,3 +7105,88 @@ background-image: url(http://upload.cheaa.com/2014/0609/1402274629915.jpg)!impor
   width:27.333333%;
 }
 
+/*footer new*/
+.footer-main{
+  width: 100%;
+/*   background-image: url(https://a0.muscache.com/airbnb/static/footer/background-317dd7c2cb678ddbdb0a983d511cb9a0.png);
+   */  
+  background-image: url(/assets/image/123.png);
+  background-color: #2b2d2e;
+  color: #fff;
+}
+
+.footer-container{
+
+}
+
+.footer-img{
+  display: inline-block;
+  height: 30px;
+  margin:3px;
+}
+
+.footer-text{
+  font-size: 19px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.footer-topic{
+  font-size: 14px;
+}
+
+.footer-line{
+  border-top:1px solid #dce0e0;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.footer-right{
+  text-align: center;
+}
+
+#footer-about{
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition:color 0.5s;
+  -webkit-transition:color 0.5s; /* Safari */
+}
+#footer-about:hover{
+  text-decoration: none;
+  color:red;
+}
+
+.footer-img-icon{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.footer-img-code{
+  width: 80px;
+  height: 80px;
+}
+/*dsg*/
+.dsg-container{
+  padding-left: 50px;
+  padding-top: 11px;
+}
+
+/*ad-text*/
+.ad-text{
+  z-index: 2;
+  border: none;
+  position: absolute;
+  width: 35px !important;
+  height: 15px !important;
+  bottom: 0px;
+  left: 27px;
+}
+
+/*hot*/
+.hot-text{
+  width: 30px !important;
+  height: 14px !important;
+  margin-left: 70px;
+  margin-top: -58px;
+}

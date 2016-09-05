@@ -12,6 +12,9 @@
         <li @if (Request::is('admin/ad*')) class="active" @endif>
             <a href="/admin/ad">广告</a>
         </li>
+        <li @if (Request::is('admin/video*')) class="active" @endif>
+            <a href="/admin/video">视频</a>
+        </li>
     </ul>
 @endif
 

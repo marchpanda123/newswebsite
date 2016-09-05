@@ -1,6 +1,6 @@
 <?php
 return [
-    'title' => '海外网',
+    'title' => '法国频道-海外网',
     'posts_per_page' => 5,
     'uploads' => [
         'storage' => 'local',
