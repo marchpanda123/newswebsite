@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -28,15 +28,12 @@ Route::post('author/pageImage', [
 //Route for the admins
 Route::resource('admin/ad', 'Admin\AdController');
 Route::post('admin/ad/{id}', 'Admin\AdController@update');
-Route::resource('admin/video', 'Admin\VideoController');
-Route::post('admin/video/{id}', 'Admin\VideoController@update');
 Route::resource('admin/article', 'Admin\ArticleController', ['only' => ['index', 'show', 'update']]);
 Route::resource('admin/tag', 'Admin\TagController', ['except' => ['show']]);
 Route::resource('admin/label', 'Admin\LabelController', ['except' => ['index', 'show']]);
 Route::post('admin/label/{id}', 'Admin\LabelController@update');
 Route::resource('admin/user', 'Admin\UserController');
-Route::resource('admin/video', 'Admin\VideoController');
-Route::post('admin/video/{id}', 'Admin\VideoController@update');
+
 // Routes for the authors
 Route::resource('author/article', 'Author\ArticleController');
 Route::get('author/tag', 'Author\TagController@index');

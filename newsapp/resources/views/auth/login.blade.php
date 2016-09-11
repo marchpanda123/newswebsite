@@ -28,6 +28,7 @@
                                 </div>
                             </div>
 
+
                             <div class="form-group">
                                 <label class="col-md-4 control-label">密码</label>
 
@@ -49,7 +50,7 @@
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
                                     <button type="submit" class="btn btn-primary">登入</button>
-                                    <button type="button" class="btn btn-primary"><a href="http://xineurope.duoshuo.com/admin/users/" style="color:white;text-decoration:none;">登入用户中心</a></button>
+                                    <button type="button" class="btn btn-primary"><a href="http://xineurope123.duoshuo.com/admin" style="color:white;text-decoration:none;">登入用户中心</a></button>
                                 </div>
                             </div>
                         </form>

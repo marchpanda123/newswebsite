@@ -4,7 +4,8 @@
         <!--xineuropecontent-->
         <div class="module-highlight">
             <div class="row highlight-row">
-                <div style="background:#e7e8e1;padding-top:30px;padding-bottom:20px;" class="hidden-xs hidden-sm"><img src="/assets/image/logo1.png" style="display:inline-block;"><img src="/assets/image/logo2.png" id="logo2" style="display:inline-block;"></div>
+                <!-- <div style="background:#e7e8e1;padding-top:30px;padding-bottom:20px;" class="hidden-xs hidden-sm"><img src="/assets/image/logo1.png" style="display:inline-block;"><img src="/assets/image/logo2.png" id="logo2" style="display:inline-block;"></div> -->
+                <div class="logotop123 hidden-xs hidden-sm"><img src="/assets/image/logo22.png" class="logotop123img"></div>
                 <div id="carousel-news-generic" class="carousel slide col-sm-12 col-md-6" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -244,7 +245,7 @@
                                         @foreach($hotevens as $hoteven)
                                             <li class="top-list-item">
                                                 <a class="top-list-link" href="/article/{{$hoteven->id}}"><img src="{{$hoteven->page_image}}" class="img-responsive article-img">
-                                                <img src="/assets/image/hot.gif" class="hot-text">
+                                                <img src="/assets/image/hot4.gif" class="hot-text">
                                                 <a class="top-list-headline" style="text-decoration:none" href="/article/{{$hoteven->id}}">{{$hoteven->title}}</a>
                                             </li>
                                         @endforeach
@@ -274,16 +275,29 @@
                         </div>
                     </div>
                     <div class="module-ads">
-            <div class="row">
-                @foreach($ads as $ad)
-                    <div class="col-xs-12 col-sm-6 module-ad @if($i++==1) hidden-xs @endif">
-                        <img src="{{$ad->image_path}}" alt="{{$ad->name}}" class="img-responsive ad-image">
-                        <a class="article-link" href="http://{{$ad->url}}"></a>
-                        <img src="/assets/image/adtext.jpg" class="ad-text">
+                        <div class="row">
+                            @for($j = 0 ; $j < 2 ; $j++)
+                                <div class="col-xs-12 col-sm-6 module-ad @if($i++==1) hidden-xs @endif" 
+                                @if($j==0)
+                                id="ad-cancel1" 
+                                @else 
+                                id="ad-cancel2" 
+                                @endif>
+                                @if(isset($ads[$j]))
+                                    <img src="{{$ads[$j]->image_path}}" alt="{{$ads[$j]->name}}" class="img-responsive ad-image">
+                                    <a class="article-link" href="http://{{$ads[$j]->url}}"></a>
+                                    <img src="/assets/image/adtext.jpg" class="ad-text">
+                                    <img src="/assets/image/adcancel.jpg" class="ad-cancelstyle" 
+                                @if($j==0)
+                                onclick="target_dis1()" 
+                                @else 
+                                onclick="target_dis2()" 
+                                @endif>
+                                @endif
+                                </div>
+                            @endfor
+                        </div>
                     </div>
-                @endforeach
-            </div>
-        </div>
                 </section>
                 @endif
                 

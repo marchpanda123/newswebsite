@@ -130,3 +130,15 @@ jQuery(document).ready(function(){
     }
 });
 
+//ad-cancel
+function target_dis1(){
+    var  target=document.getElementById("ad-cancel1");
+    target.style.display="none";
+    }
+
+function target_dis2(){
+    var  target=document.getElementById("ad-cancel2");
+    target.style.display="none";
+    }
+
+

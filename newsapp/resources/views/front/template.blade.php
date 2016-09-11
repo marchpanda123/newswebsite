@@ -16,7 +16,7 @@
 
 <div id="st-container" class="st-container">
     <nav class="st-menu st-effect-1 visible-xs visible-sm" id="menu-1">
-        <a style='text-decoration:none;' href="/"><h2 class="icon icon-lab">新闻网</h2></a>
+        <a style='text-decoration:none;' href="/"><img src="/assets/image/logo11.png" style="padding-left:5px;"></a>
             <ul class="siderbar-text"> 
                 <li class="visible-xs visible-sm">
                 <form action="/search" method="GET" role="search">
@@ -80,44 +80,49 @@
                     </div>
                     <div class="top-middle"></div> -->
                 <div class="visible-xs visible-sm">
-                    <a class="logo-img1" href="http://www.haiwainet.cn"><img src="/assets/image/logo1.png" id="logo1"></a><a class="logo-img2" href="/"><img src="/assets/image/logo2.png" id="logo2"></a>
+                    <a class="logo-img2" href="http://www.haiwainet.cn"><img src="/assets/image/logo123.png" id="logo2"></a><a class="logo-img1" href="/"><img src="/assets/image/logo321.png" id="logo1"></a>
                 </div> 
                 {{--Siderbar--}}
                 <div class="main clearfix">
                     <div id="st-trigger-effects" class="column siderbarnav visible-xs visible-sm"> 
-                        
                         <button data-effect="st-effect-1" class="sb-btn1"><span><img src="/assets/image/menu4.png" class="img-responsive"></span></button>
+                        <img src="/assets/image/logo38.png" style="position:absolute;right:20px;">
                     </div>  
                 </div><!-- /main -->
                 {{-- Navigation Bar --}}
                 <header class="navbar navbar-default hidden-xs hidden-sm">
                     <div class="navbar-row">                
                     <nav id="bs-navbar" class="collapse navbar-collapse">
-                        <a href="/"><img src="/assets/image/hww.png" class="nav-logo-hww"></a>
+                        <a href="/"><img src="/assets/image/logo11.png" class="nav-logo-hww"></a>
                         <ul class="nav navbar-nav"> 
                             @include('front.nav')
                         </ul>
                         <div class="container">
                             <form action="/search" method="GET" role="search">
                                 <div class="input-group topsearchbar">
-                                <input type="text" class="form-control" name="q"
-                                    placeholder="搜索" autocomplete="on">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit">
-                                        <span class="iconfont">&#xe674;</span>
-                                    </button>
-                                </span>
+                                    <input type="text" class="form-control" name="q"
+                                        placeholder="搜索" autocomplete="on">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">
+                                            <span class="iconfont">&#xe674;</span>
+                                        </button>
+                                    </span>
+                                    <img src="/assets/image/logo38.png" class="toplogoright">
                                 </div>
+
                             </form>
+                            
                         </div>
+
                     </nav>
                     <!-- xineurope nav -->
                     <nav class="cd-stretchy-nav hidden-xs hidden-sm">
                         <a class="cd-nav-trigger" href="#0">
                             <span aria-hidden="true"></span>
+                            <!--  -->
                         </a>
                         <ul>
-                            <li><a href="http://www.xineurope.com" class="active" target="_blank"><span>门户</span></a></li>
+                            <li><a href="http://www.xineurope.com" class="active" target="_blank" style="margin-top:15px;"><span>门户</span></a></li>
                             <li><a href="http://zhanbao.xineurope.com" target="_blank"><span>新闻</span></a></li>
                             <li><a href="http://bbs.xineurope.com" target="_blank"><span>战法</span></a></li>
                             <li><a href="http://buy.xineurope.com" target="_blank"><span>跳蚤</span></a></li>
@@ -126,9 +131,9 @@
                             <li><a href="http://www.newsavour.com" target="_blank"><span>寻味</span></a></li>
                             <li><a href="http://www.topshun.com/" target="_blank"><span>全顺</span></a></li>
                             <li><a href="http://www.yoyoer.com" target="_blank"><span>游游</span></a></li>
-                            <li><a href="http://www.ouituan.com" target="_blank"><span>欧团</span></a></li>
+                            <li><a href="http://www.ouituan.com" target="_blank"><span style="margin-bottom:25px;">欧团</span></a></li>
                         </ul>
-                        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+                        <span aria-hidden="true" class="stretchy-nav-bg"><img src="/assets/image/xingreen.png" class="trigger-img"></span>
                     </nav>
                     </div>
                 </header>   
@@ -269,8 +274,21 @@
 });
 tpwidget('show');</script> -->
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var duoshuoQuery = {short_name:"xineurope"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+多说公共JS代码 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"xineurope123"};
     (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;

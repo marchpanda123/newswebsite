@@ -66,24 +66,34 @@
             <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=14dd4b3814132"></script>
 
 
-    <!-- 多说评论框 start -->
+    <!-- 多说评论框 start
     <div class="ds-thread" data-thread-key="" data-title="" data-url=""></div>
-    <!-- 多说评论框 end -->
+    多说评论框 end
+    多说最新评论 start
+    <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+    多说最新评论 end
+    多说热评文章 start
+    <div class="ds-top-threads" data-range="daily" data-num-items="5"></div>
+    多说热评文章 end -->
+
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="{{$article->article_id}}" data-title="{{$article->title}}" data-url=""></div>
     <!-- 多说最新评论 start -->
     <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
     <!-- 多说最新评论 end -->
     <!-- 多说热评文章 start -->
     <div class="ds-top-threads" data-range="daily" data-num-items="5"></div>
     <!-- 多说热评文章 end -->
-
-
         </article>
 
 <!-- rightside -->
         <div class="col-sm-4 article-right hidden-xs hidden-sm">
             <div class="article-container">
                 <div class="article-popular">
-                    <p>热点快讯</p>
+                    <div class="article-popular-title">
+                        <img src="/assets/image/news2.png" class="article-clock">
+                        <p class="article-clocktext">热点快讯</p>
+                    </div>
                     <ul class="article-list-content">
                        @foreach($hotevens as $hoteven)
                         <li class="article-list-right">
@@ -94,7 +104,10 @@
                     </ul>
                 </div>
                 <div class="article-popular-pic">
-                    <p>推荐图文</p>
+                    <div class="article-popular-title">
+                        <img src="/assets/image/picture2.png" class="article-clock">
+                        <p class="article-clocktext">推荐图文</p>
+                    </div>
                     <ul class="article-list-content">
                     @foreach($hotimgs as $hotimg)
                         <div class="article-box-style">
@@ -110,7 +123,10 @@
                     </ul>
                 </div>
                 <div class="article-popular-rank">
-                    <p>热门排行</p>
+                    <div class="article-popular-title">
+                        <img src="/assets/image/rankings2.png" class="article-clock">
+                        <p class="article-clocktext">热门排行</p>
+                    </div>
                     <div class="article-rank">
                     <ul class="article-rank-list">
                     @foreach($ranks as $rank)
